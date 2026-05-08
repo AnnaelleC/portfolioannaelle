@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche Révision Maths BTS SIO — Lycée Rabelais</title>
+  <style>
+    :root {
+      --c1:#7C5CFF; --c2:#FFD93D; --c3:#6BCB77; --c4:#4DD9E8;
+      --c5:#FF79C6; --c6:#FF6B6B; --c7:#FFA07A;
+      --bg:#0d0d18; --card:#16162a; --card2:#1a1a30;
+      --text:#e8e8f4; --muted:#8888aa; --border:#2a2a4a;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);
+         line-height:1.75;padding:20px;max-width:980px;margin:0 auto}
+
+    /* HEADER */
+    .header{text-align:center;padding:40px 20px 32px;background:linear-gradient(135deg,#1a1a30,#12122a);
+            border-radius:18px;border:2px solid var(--c1);margin-bottom:28px}
+    .header h1{font-size:2rem;color:var(--c1);margin-bottom:8px}
+    .header p{color:var(--muted);font-size:.9rem}
+    .chips{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin-top:16px}
+    .chip{padding:4px 13px;border-radius:20px;font-size:.78rem;font-weight:700;border:1px solid}
+
+    /* TOC */
+    .toc{background:var(--card);border-radius:12px;padding:18px 24px;margin-bottom:28px;border-left:4px solid var(--c2)}
+    .toc h2{color:var(--c2);margin-bottom:10px;font-size:1rem}
+    .toc ol{padding-left:20px} .toc li{margin:4px 0}
+    .toc a{color:var(--muted);text-decoration:none} .toc a:hover{color:var(--c1)}
+
+    /* SECTIONS */
+    section{background:var(--card);border-radius:18px;padding:28px;margin-bottom:28px;border:1px solid var(--border)}
+    h2{font-size:1.3rem;margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--border)}
+    h3{font-size:1rem;color:var(--c2);margin:20px 0 9px}
+
+    /* BLOCS */
+    .card{background:var(--card2);border-radius:9px;padding:13px 17px;margin:11px 0;border-left:3px solid var(--c1)}
+    .tip{background:#0d1f0d;border-left:3px solid var(--c3);border-radius:9px;padding:12px 16px;margin:9px 0}
+    .warn{background:#1f0d0d;border-left:3px solid var(--c6);border-radius:9px;padding:12px 16px;margin:9px 0}
+    .fire{background:#1f1a00;border-left:3px solid var(--c2);border-radius:9px;padding:12px 16px;margin:9px 0}
+    .info{background:#001a1f;border-left:3px solid var(--c4);border-radius:9px;padding:12px 16px;margin:9px 0}
+
+    /* CODE */
+    code{background:#0a0a18;padding:2px 7px;border-radius:4px;font-family:'Courier New',monospace;color:#a8d8ff;font-size:.9em}
+    pre{background:#0a0a18;border-radius:8px;padding:14px;overflow-x:auto;margin:11px 0;
+        font-family:'Courier New',monospace;font-size:.86em;color:#a8d8ff;border:1px solid var(--border);line-height:1.6}
+
+    /* TABLES */
+    table{width:100%;border-collapse:collapse;margin:11px 0;font-size:.9em}
+    th{background:var(--c1);color:#fff;padding:8px 12px;text-align:left}
+    td{padding:7px 12px;border-bottom:1px solid var(--border)}
+    tr:nth-child(even) td{background:#0f0f22}
+    .tsm td,.tsm th{padding:5px 9px;font-size:.84em}
+
+    /* EXOS */
+    .ex{background:#0f0f22;border-radius:9px;padding:14px 18px;margin:12px 0;border:1px solid var(--border)}
+    details summary{cursor:pointer;color:var(--c1);font-weight:600;padding:5px 0;user-select:none}
+    details summary:hover{color:var(--c2)}
+    details[open] summary{margin-bottom:8px}
+    .sol{margin-top:8px;padding-top:8px;border-top:1px dashed var(--border)}
+
+    /* QUIZ */
+    .quiz-section{counter-reset:quiz}
+    .qz{background:var(--card2);border-radius:9px;padding:13px 17px 13px 52px;margin:9px 0;
+        border:1px solid var(--border);position:relative;counter-increment:quiz}
+    .qz::before{content:"Q" counter(quiz);position:absolute;left:13px;top:13px;
+                background:var(--c1);color:#fff;width:26px;height:26px;border-radius:50%;
+                display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700}
+
+    /* MISC */
+    .formula{background:#0a0a18;border:1px solid var(--c1);border-radius:7px;padding:11px 16px;
+             margin:11px 0;text-align:center;font-size:1.05em;color:#c4b0ff;font-family:'Courier New',monospace}
+    .g2{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:11px 0}
+    @media(max-width:660px){.g2{grid-template-columns:1fr}}
+    .badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:.75rem;font-weight:700;margin-left:7px}
+    .easy{background:#0d2a0d;color:var(--c3)} .med{background:#2a2000;color:var(--c2)} .hard{background:#2a0d0d;color:var(--c6)}
+    ul,ol{padding-left:22px} li{margin:5px 0}
+    strong{color:#d0d0ff}
+  </style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <h1>📐 Fiche de Révision — Mathématiques BTS SIO</h1>
+  <p>Lycée Rabelais · Saint-Brieuc · 2023-2024 · D'après le cours officiel</p>
+  <div class="chips">
+    <span class="chip" style="color:#a88fff;border-color:#7C5CFF">1. Bases de numération</span>
+    <span class="chip" style="color:#ffd93d;border-color:#ffd93d">2. Écriture des réels</span>
+    <span class="chip" style="color:#6bcb77;border-color:#6bcb77">3. Arithmétique modulaire</span>
+    <span class="chip" style="color:#4dd9e8;border-color:#4dd9e8">4. Logique propositionnelle</span>
+    <span class="chip" style="color:#ff79c6;border-color:#ff79c6">5. Algèbre de Boole</span>
+    <span class="chip" style="color:#ff6b6b;border-color:#ff6b6b">6. Théorie des ensembles</span>
+    <span class="chip" style="color:#ffa07a;border-color:#ffa07a">7. Matrices &amp; Graphes</span>
+  </div>
+</div>
+
+<!-- ═══ TOC ═══ -->
+<nav class="toc">
+  <h2>📋 Sommaire</h2>
+  <ol>
+    <li><a href="#ch1">Bases de numération — binaire, hex, conversions, additions</a></li>
+    <li><a href="#ch2">Écriture des réels — dyadique, arrondis décimal et binaire</a></li>
+    <li><a href="#ch3">Arithmétique modulaire — div. euclidienne, premiers, PGCD, congruences</a></li>
+    <li><a href="#ch4">Logique propositionnelle — connecteurs, tables, quantificateurs ∀∃</a></li>
+    <li><a href="#ch5">Algèbre de Boole — lois, De Morgan, diagrammes de Karnaugh</a></li>
+    <li><a href="#ch6">Théorie des ensembles — opérations, relations, applications</a></li>
+    <li><a href="#ch7">Matrices — opérations, inverse, systèmes</a></li>
+    <li><a href="#ch8">Graphes — matrice d'adjacence, chemins, fermeture transitive</a></li>
+    <li><a href="#quiz">Mini-quiz (10 questions)</a></li>
+    <li><a href="#exam">Exercice type examen + correction</a></li>
+  </ol>
+</nav>
+
+<!-- ═══════════════ CH1 BASES DE NUMÉRATION ═══════════════ -->
+<section id="ch1">
+  <h2 style="color:#a88fff">1️⃣ Bases de numération</h2>
+
+  <div class="fire">🔥 Un nombre a une valeur unique mais plusieurs <em>écritures</em> selon la base. En info : base 2 (mémoire), base 16 (raccourci du binaire), base 10 (humains).</div>
+
+  <h3>Écriture en base 2 (binaire)</h3>
+  <div class="card">
+    Tout entier naturel s'écrit : <strong>n = a₀×2⁰ + a₁×2¹ + … + aₖ×2ᵏ</strong> (aᵢ ∈ {0,1})<br>
+    <strong>Bit de poids fort :</strong> bit de la plus grande puissance · <strong>Poids faible :</strong> bit des unités<br>
+    8 bits = 1 <strong>octet</strong>. Ex : (0000 0011)₂ représente 3.
+  </div>
+
+  <h3>3 méthodes de conversion décimal → binaire</h3>
+
+  <div class="g2">
+    <div class="card">
+      <strong>Méthode 1</strong> — décomposition en puissances de 2<br>
+      203 = 128+64+8+2+1 = 2⁷+2⁶+2³+2¹+2⁰<br>
+      → <code>1100 1011₂</code>
+    </div>
+    <div class="card">
+      <strong>Méthode 2</strong> — divisions successives par 2<br>
+      Diviser par 2, noter les restes, lire <em>de bas en haut</em>.
+    </div>
+  </div>
+
+  <div class="ex">
+    <h4>📘 Méthode 2 : 203₁₀ → binaire</h4>
+    <pre>
+203÷2=101 r1 / 101÷2=50 r1 / 50÷2=25 r0 / 25÷2=12 r1
+12÷2=6 r0 / 6÷2=3 r0 / 3÷2=1 r1 / 1÷2=0 r1
+
+Lire les restes de bas en haut : 203₁₀ = 1100 1011₂</pre>
+  </div>
+
+  <h3>Hexadécimal (base 16)</h3>
+  <div class="card">
+    16 chiffres : 0–9 puis A=10, B=11, C=12, D=13, E=14, F=15<br>
+    Chaque chiffre hex = <strong>exactement 4 bits</strong> → conversion immédiate !
+  </div>
+
+  <div class="g2">
+    <div class="ex">
+      <h4>📘 Hex → déc : (D4A)₁₆</h4>
+      <pre>13×16²+4×16+10 = 3328+64+10 = 3402</pre>
+    </div>
+    <div class="ex">
+      <h4>📘 Déc → hex : 503₁₀</h4>
+      <pre>503÷16=31 r7 / 31÷16=1 r15=F / 1÷16=0 r1
+503₁₀ = (1F7)₁₆</pre>
+    </div>
+  </div>
+
+  <h3>Binaire ↔ Hexadécimal (blocs de 4 bits)</h3>
+  <div class="ex">
+    <h4>📘 Bin → hex : (1011 0100 0011 1101)₂</h4>
+    <pre>1011→B · 0100→4 · 0011→3 · 1101→D  →  (B43D)₁₆</pre>
+  </div>
+  <div class="ex">
+    <h4>📘 Hex → bin : (F7B)₁₆</h4>
+    <pre>F→1111 · 7→0111 · B→1011  →  1111 0111 1011₂</pre>
+  </div>
+
+  <h3>Additions binaires et hexadécimales</h3>
+  <div class="card">
+    <strong>En base 2 :</strong> 1+1 = 10 (zéro, retenue 1) · 1+1+1 = 11 (1, retenue 1)<br>
+    <strong>En base 16 :</strong> retenue dès que la somme ≥ 16. Ex : 9+A = 19₁₀ = 13₁₆ → écrire 3, retenue 1
+  </div>
+
+  <h3>Multiplications par 2 en binaire</h3>
+  <div class="card">
+    Multiplier par 2 = <strong>décaler la virgule d'un cran vers la droite</strong> (ou ajouter un 0 à droite).<br>
+    Diviser par 2 = décaler la virgule d'un cran vers la gauche.<br>
+    Ex : (1 0101)₂ × 2 = (10 1010)₂ · (101)₂ ÷ 32 = (0,00101)₂
+  </div>
+
+  <h3>Entiers signés — complément à 2 sur 8 bits</h3>
+  <div class="info">
+    💡 Pour représenter n négatif (−128 ≤ n ≤ −1) : on stocke <strong>n + 256</strong>.<br>
+    Pour n ∈ [0, 127] : représentation directe.<br>
+    Avantage : l'addition fonctionne naturellement (retenue du 9e bit ignorée).
+  </div>
+
+  <div class="ex">
+    <h4>✏️ Exercices <span class="badge easy">Facile</span></h4>
+    <p>a) Convertir 142₁₀ en bin et hex &nbsp;&nbsp; b) Convertir (9C)₁₆ en déc &nbsp;&nbsp; c) Calculer (1101 1011)₂ + (0011 0110)₂</p>
+    <details><summary>Correction</summary>
+      <div class="sol">
+        <p>a) 142 = 128+8+4+2 = <strong>1000 1110₂</strong> = <strong>8E₁₆</strong></p>
+        <p>b) 9×16+12 = <strong>156₁₀</strong></p>
+        <p>c) 1101 1011 + 0011 0110 = <strong>1 0001 0001₂</strong> = 273₁₀ (214+57=271... recalc : 219+54=273 ✓)</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════ CH2 ÉCRITURE DES RÉELS ═══════════════ -->
+<section id="ch2">
+  <h2 style="color:#ffd93d">2️⃣ Écriture des réels</h2>
+
+  <h3>Arrondis décimaux</h3>
+  <div class="card">
+    Pour arrondir à 10⁻ᵖ (p chiffres après la virgule) ou à 10ᵏ :<br>
+    <ul>
+      <li><strong>Par défaut :</strong> on coupe (troncature)</li>
+      <li><strong>Par excès :</strong> on coupe et on ajoute 10⁻ᵖ (ou 10ᵏ)</li>
+      <li><strong>Au plus proche :</strong> on regarde le chiffre suivant — si 0–4 → défaut, si 5–9 → excès</li>
+    </ul>
+  </div>
+
+  <div class="ex">
+    <h4>📘 Exemples</h4>
+    <pre>
+3/7 = 0,428571... arrondi à 10⁻³ :
+  Par défaut  : 0,428
+  Par excès   : 0,429
+  Au plus proche : 0,429  (4e chiffre = 5 → excès)
+
+273 692,291 arrondi à 10⁴ :
+  Par défaut  : 270 000
+  Par excès   : 280 000
+  Au plus proche : 270 000  (chiffre des 10³ = 3 < 5 → défaut)</pre>
+  </div>
+
+  <h3>Écriture dyadique (partie fractionnaire en base 2)</h3>
+  <div class="card">
+    On utilise des puissances de 2 négatives : 2⁻¹=0,5 · 2⁻²=0,25 · 2⁻³=0,125…<br>
+    Pour convertir la partie fractionnaire : <strong>multiplier par 2 en notant la partie entière (0 ou 1)</strong>, lire de haut en bas.
+  </div>
+
+  <div class="ex">
+    <h4>📘 Convertir 5,75₁₀ en base 2</h4>
+    <pre>
+Partie entière : 5 = 101₂
+
+Partie frac. 0,75 = 0,5 + 0,25 = 2⁻¹ + 2⁻² = (0,11)₂
+  OU par multiplications :
+  0,75 × 2 = 1,5  → 1
+  0,5  × 2 = 1,0  → 1  STOP
+
+5,75₁₀ = (101,11)₂</pre>
+  </div>
+
+  <div class="warn">⚠️ <strong>Développement infini :</strong> 0,1₁₀ = (0, 0001 1001 1001…)₂ — jamais exact en machine ! C'est la source des erreurs d'arrondi en programmation.</div>
+
+  <h3>Arrondis en base 2 (à 2ᵏ près)</h3>
+  <div class="card">
+    Même principe qu'en base 10 mais avec des puissances de 2 :<br>
+    <strong>Au plus proche :</strong> regarder le bit juste après la position voulue — si 0 → défaut, si 1 → excès (ajouter 2ᵏ).
+  </div>
+
+  <div class="ex">
+    <h4>📘 Arrondir (1101 1010)₂ à 2⁴ au plus proche</h4>
+    <pre>
+Par défaut : (1101 0000)₂
+Le bit à droite du bit de 2⁴ est 1 → arrondi par excès :
+(1101 0000)₂ + (0001 0000)₂ = (1110 0000)₂</pre>
+  </div>
+
+  <div class="ex">
+    <h4>✏️ Exercice <span class="badge med">Moyen</span></h4>
+    <p>a) Convertir 12,625₁₀ en base 2 &nbsp; b) Arrondir (11,0101)₂ à 2⁻² au plus proche</p>
+    <details><summary>Correction</summary>
+      <div class="sol">
+        <pre>
+a) 12 = 1100₂ · 0,625 → ×2=1,25→1 / ×2=0,5→0 / ×2=1,0→1
+   12,625₁₀ = (1100,101)₂
+
+b) (11,0101)₂ à 2⁻² = garder 2 bits après virgule : 11,01
+   3e bit = 0 → par défaut → (11,01)₂ = 3,25₁₀</pre>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════ CH3 ARITHMÉTIQUE MODULAIRE ═══════════════ -->
+<section id="ch3">
+  <h2 style="color:#6bcb77">3️⃣ Arithmétique modulaire</h2>
+
+  <h3>Division euclidienne</h3>
+  <div class="formula">A = Q × B + R &nbsp;&nbsp; avec &nbsp; 0 ≤ R &lt; B</div>
+  <div class="card">
+    A = dividende · B = diviseur · Q = quotient · R = reste (toujours &lt; B)<br>
+    En Python : quotient = <code>A // B</code> · reste = <code>A % B</code>
+  </div>
+  <div class="warn">⚠️ Le reste est <strong>toujours ≥ 0 et strictement &lt; B</strong>. Si on trouve R ≥ B, l'écriture n'est pas une division euclidienne.</div>
+
+  <h3>Diviseurs et multiples</h3>
+  <div class="card">
+    B divise A (B est diviseur de A) ⟺ R = 0 ⟺ ∃k∈ℕ, A = k×B<br>
+    <strong>Propriétés :</strong> si c|a et c|b alors c|(a+b) et c|(a−b). Si a|b et b|c alors a|c.
+  </div>
+
+  <h3>Nombres premiers</h3>
+  <div class="card">
+    p ≥ 2 est <strong>premier</strong> si ses seuls diviseurs sont 1 et p.<br>
+    <strong>Test :</strong> pour savoir si n est premier, tester les diviseurs premiers jusqu'à √n.
+  </div>
+
+  <div class="ex">
+    <h4>📘 251 est-il premier ?</h4>
+    <pre>√251 ≈ 15,8 → tester 2, 3, 5, 7, 11, 13.
+Aucun ne divise 251 → 251 est premier ✓</pre>
+  </div>
+
+  <h3>Décomposition en facteurs premiers</h3>
+  <div class="card">
+    Tout entier ≥ 2 se décompose de façon <strong>unique</strong> en produit de facteurs premiers.<br>
+    Méthode : diviser successivement par 2, 3, 5, 7, 11…
+  </div>
+
+  <div class="ex">
+    <h4>📘 Décomposer 234</h4>
+    <pre>234÷2=117÷3=39÷3=13÷13=1
+234 = 2 × 3² × 13</pre>
+  </div>
+
+  <h3>PGCD</h3>
+  <div class="card">
+    PGCD(a,b) = le plus grand entier divisant à la fois a et b.<br>
+    Si PGCD(a,b)=1, on dit que a et b sont <strong>premiers entre eux</strong>.
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <strong>Par facteurs premiers :</strong><br>
+      Produit des facteurs communs avec <em>le plus petit exposant</em>.<br>
+      Ex : 240=2⁴×3×5, 72=2³×3²<br>
+      PGCD=2³×3=24
+    </div>
+    <div class="card">
+      <strong>Algorithme d'Euclide :</strong><br>
+      PGCD(a,b) = PGCD(b, a mod b)<br>
+      Répéter jusqu'au reste = 0.<br>
+      Le dernier reste non nul est le PGCD.
+    </div>
+  </div>
+
+  <div class="fire">🔥 L'algorithme d'Euclide est la méthode la plus rapide à l'examen !</div>
+
+  <div class="ex">
+    <h4>📘 PGCD(420, 182) — Euclide</h4>
+    <pre>
+420 = 2×182 + 56   → PGCD(420,182) = PGCD(182,56)
+182 = 3×56  + 14   → PGCD(182,56)  = PGCD(56,14)
+ 56 = 4×14  + 0    → PGCD = 14</pre>
+  </div>
+
+  <h3>Congruences</h3>
+  <div class="formula">a ≡ b [n] &nbsp;⟺&nbsp; n divise (a − b) &nbsp;⟺&nbsp; a et b ont le même reste dans la div. par n</div>
+
+  <div class="card">
+    <strong>Compatibilité avec les opérations</strong> (si a≡b[n] et c≡d[n]) :<br>
+    a+c ≡ b+d [n] · a−c ≡ b−d [n] · a×c ≡ b×d [n] · aᵖ ≡ bᵖ [n]
+  </div>
+
+  <div class="tip">💡 <strong>Parcours de liste circulaire :</strong> si on parcourt une liste de longueur n par sauts de p, on passe par tous les éléments si et seulement si PGCD(p,n)=1. Sinon on ne visite que les multiples de PGCD(p,n).</div>
+
+  <div class="ex">
+    <h4>📘 Dernier chiffre de 123456789 × 981234567</h4>
+    <pre>
+123456789 ≡ 9 [10]
+981234567 ≡ 7 [10]
+Produit ≡ 9×7 = 63 ≡ 3 [10]
+→ se termine par 3</pre>
+  </div>
+
+  <div class="ex">
+    <h4>✏️ Exercices <span class="badge med">Moyen</span></h4>
+    <p>a) PGCD(4114, 1530) par Euclide &nbsp; b) Vérifier que 90≡6[7] et 66≡3[7], puis calculer 90×66 mod 7 &nbsp; c) Que vaut 1314 mod 13 ?</p>
+    <details><summary>Correction</summary>
+      <div class="sol">
+        <pre>
+a) 4114=2×1530+1054 / 1530=1×1054+476 / 1054=2×476+102 / 476=4×102+68 / 102=1×68+34 / 68=2×34+0
+   PGCD=34
+
+b) 90×66 ≡ 6×3 = 18 ≡ 4 [7]
+
+c) 1314 = 13×100 + 14  → 1314 ≡ 0×100 + 1 = 1 [13]</pre>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════ CH4 LOGIQUE PROPOSITIONNELLE ═══════════════ -->
+<section id="ch4">
+  <h2 style="color:#4dd9e8">4️⃣ Logique propositionnelle</h2>
+
+  <h3>Connecteurs logiques</h3>
+  <table>
+    <tr><th>Symbole</th><th>Nom</th><th>Vrai quand…</th></tr>
+    <tr><td><code>P̄</code> (barre)</td><td>Négation (NON P)</td><td>P est fausse</td></tr>
+    <tr><td><code>P ∧ Q</code></td><td>Conjonction (ET)</td><td>P et Q toutes les deux vraies</td></tr>
+    <tr><td><code>P ∨ Q</code></td><td>Disjonction (OU)</td><td>au moins une vraie</td></tr>
+    <tr><td><code>P ⇔ Q</code></td><td>Équivalence</td><td>P et Q ont la même valeur</td></tr>
+    <tr><td><code>P ⇒ Q</code></td><td>Implication</td><td>fausse seulement si P=1 et Q=0</td></tr>
+  </table>
+
+  <div class="fire">🔥 <strong>P ⇒ Q est FAUSSE seulement si P est vraie et Q est fausse.</strong> Dans tous les autres cas elle est vraie — notamment «faux implique n'importe quoi».</div>
+
+  <h3>Tables de vérité complètes</h3>
+  <div class="g2">
+    <table class="tsm">
+      <tr><th>P</th><th>Q</th><th>P∧Q</th><th>P∨Q</th><th>P⇒Q</th><th>P⇔Q</th></tr>
+      <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+      <tr><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+      <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td></tr>
+      <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+    </table>
+    <div>
+      <div class="card"><strong>Tautologies importantes :</strong>
+        <ul>
+          <li><code>P ∨ P̄ = 1</code> (toujours vrai)</li>
+          <li><code>P ∧ P̄ = 0</code> (toujours faux)</li>
+          <li><code>P ⇒ Q ≡ P̄ ∨ Q</code></li>
+          <li><code>P ⇔ Q ≡ (P⇒Q) ∧ (Q⇒P)</code></li>
+        </ul>
+      </div>
+      <div class="card"><strong>Lois de De Morgan :</strong><br>
+        <code>P̄∧Q̄ ≡ P∨Q  (barre globale)</code><br>
+        <code>P̄∨Q̄ ≡ P∧Q  (barre globale)</code><br>
+        On distribue la barre et on échange ∧↔∨
+      </div>
+    </div>
+  </div>
+
+  <h3>Calcul des prédicats — quantificateurs</h3>
+  <div class="card">
+    <strong>∀</strong> = «pour tout» (quantificateur universel)<br>
+    <strong>∃</strong> = «il existe» (quantificateur existentiel)<br>
+    Un <strong>prédicat</strong> contient une variable et devient une proposition avec des quantificateurs.
+  </div>
+
+  <div class="card">
+    <strong>Règle d'ordre :</strong> plusieurs ∀ ou plusieurs ∃ consécutifs peuvent être échangés.<br>
+    <strong>On ne peut PAS échanger un ∃ et un ∀.</strong><br>
+    Ex : «∀x ∃y, x&lt;y» est vrai mais «∃y ∀x, x&lt;y» est faux (aucun réel n'est plus grand que tous).
+  </div>
+
+  <div class="card">
+    <strong>Négation d'une proposition quantifiée :</strong><br>
+    Changer les ∀ en ∃, les ∃ en ∀, et nier le prédicat final.<br>
+    Ex : NON(∀n∈ℕ, ∃k∈ℕ, n=2k) = ∃n∈ℕ, ∀k∈ℕ, n≠2k
+  </div>
+
+  <div class="tip">💡 Pour prouver qu'une proposition ∀ est <em>fausse</em> : donner un contre-exemple.<br>
+  Pour prouver qu'une proposition ∃ est <em>vraie</em> : donner la valeur qui convient.</div>
+
+  <div class="ex">
+    <h4>✏️ Exercice <span class="badge med">Moyen</span></h4>
+    <p>a) Construire la table de vérité de <code>(P∨Q) ∧ (P∨Q̄) </code> — conclusion ?<br>
+       b) Donner la négation de : ∀x∈ℝ, ∃y∈ℝ, 3y+1=x</p>
+    <details><summary>Correction</summary>
+      <div class="sol">
+        <pre>
+a) P Q | P∨Q | P∨Q̄ | résultat
+   0 0 |  0  |  1  |    0
+   0 1 |  1  |  0  |    0
+   1 0 |  1  |  1  |    1
+   1 1 |  1  |  1  |    1
+La colonne = colonne P → (P∨Q) ∧ (P∨Q̄) ≡ P ✓
+
+b) Négation : ∃x∈ℝ, ∀y∈ℝ, 3y+1≠x
+   (Cette négation est fausse car la prop. originale est vraie : y=(x−1)/3 convient)</pre>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════ CH5 ALGÈBRE DE BOOLE ═══════════════ -->
+<section id="ch5">
+  <h2 style="color:#ff79c6">5️⃣ Algèbre de Boole</h2>
+
+  <h3>Définition formelle</h3>
+  <div class="card">
+    Une algèbre de Boole est un ensemble E muni de <strong>+</strong>, <strong>×</strong>, <strong>complément ā</strong>, et des éléments <strong>0</strong> et <strong>1</strong>, vérifiant :
+    <ul>
+      <li>Commutativité, associativité de + et ×</li>
+      <li>× distributif sur + : a(b+c) = ab+ac</li>
+      <li><strong>+ distributif sur × : a+bc = (a+b)(a+c)</strong> ← la propriété contre-intuitive !</li>
+      <li>0 neutre pour + · 1 neutre pour × · 0 absorbant pour × · 1 absorbant pour +</li>
+      <li>a+ā = 1 et a×ā = 0</li>
+    </ul>
+  </div>
+
+  <div class="info">💡 <strong>3 exemples d'algèbres de Boole :</strong> {0;1} muni de ∨,∧,¬ · les propositions logiques · P(E) muni de ∪,∩,complémentaire</div>
+
+  <h3>Propriétés fondamentales</h3>
+  <div class="g2">
+    <div class="card">
+      <strong>Idempotence :</strong><br>
+      a+a = a &nbsp;·&nbsp; a×a = a<br>
+      Donc 2a=a, na=a, a²=a, aⁿ=a
+    </div>
+    <div class="card">
+      <strong>Absorption :</strong><br>
+      a + ab = a<br>
+      a(a+b) = a
+    </div>
+  </div>
+
+  <div class="card">
+    <strong>Lois de De Morgan :</strong><br>
+    <code>x̄ × ȳ = x + y  (barre de x×y)</code><br>
+    <code>x̄ + ȳ = x × y  (barre de x+y)</code>
+  </div>
+
+  <h3>Diagrammes de Karnaugh — simplification</h3>
+  <div class="card">
+    On colorie les cases correspondant à 1. On regroupe les 1 par groupes de <strong>1, 2 ou 4</strong> (puissances de 2). Un groupe plus grand élimine plus de variables.
+  </div>
+
+  <div class="card">
+    Tableau Karnaugh à 2 variables :<br>
+    <table class="tsm" style="width:auto;display:inline-table">
+      <tr><th></th><th>b</th><th>b̄</th></tr>
+      <tr><td><strong>a</strong></td><td>ab</td><td>ab̄</td></tr>
+      <tr><td><strong>ā</strong></td><td>āb</td><td>āb̄</td></tr>
+    </table><br>
+    Un groupe de 2 cases adjacentes élimine une variable. Un groupe de 4 = expression = 1.
+  </div>
+
+  <div class="ex">
+    <h4>📘 Simplifier : f = ab + ab̄ + āb (par calcul)</h4>
+    <pre>
+f = a(b+b̄) + āb = a×1 + āb = a + āb
+
+Utiliser a+āb = a+b (distributivité) :
+f = a + b</pre>
+    <div class="tip">💡 Vérif : (0,0)→0 ✓ (0,1)→1 ✓ (1,0)→1 ✓ (1,1)→1 ✓</div>
+  </div>
+
+  <div class="ex">
+    <h4>✏️ Exercice <span class="badge med">Moyen</span></h4>
+    <p>Montrer que (a+b)(ā+c) = ac + āb (utiliser la distributivité de + sur ×).</p>
+    <details><summary>Correction</summary>
+      <div class="sol">
+        <pre>
+(a+b)(ā+c) = a×ā + ac + b×ā + bc
+           = 0 + ac + āb + bc
+           = ac + āb + bc
+           = ac + āb + bc(a+ā)    (car a+ā=1)
+           = ac + āb + abc + ābc
+           = ac(1+b) + āb(1+c)
+           = ac + āb  ✓</pre>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════ CH6 THÉORIE DES ENSEMBLES ═══════════════ -->
+<section id="ch6">
+  <h2 style="color:#ff6b6b">6️⃣ Théorie des ensembles</h2>
+
+  <h3>Notations de base</h3>
+  <div class="card">
+    x∈E (x appartient) · x∉E (n'appartient pas) · Card(E) = cardinal (nombre d'éléments)<br>
+    ∅ = ensemble vide · {x} = singleton · A⊂B = A inclus dans B = ∀x∈A, x∈B<br>
+    <strong>Ensemble des parties P(E) :</strong> tous les sous-ensembles de E.<br>
+    Si Card(E)=n alors <strong>Card(P(E)) = 2ⁿ</strong>
+  </div>
+
+  <h3>Opérations</h3>
+  <table class="tsm">
+    <tr><th>Opération</th><th>Notation</th><th>Définition</th></tr>
+    <tr><td>Intersection</td><td>A ∩ B</td><td>éléments dans A ET dans B</td></tr>
+    <tr><td>Union</td><td>A ∪ B</td><td>éléments dans A OU dans B</td></tr>
+    <tr><td>Complémentaire</td><td>Ā</td><td>éléments de E n'appartenant pas à A</td></tr>
+    <tr><td>Différence</td><td>A\B = A ∩ B̄</td><td>éléments de A mais pas de B</td></tr>
+    <tr><td>Différence symétrique</td><td>AΔB</td><td>(A∪B) \ (A∩B) — le «ou exclusif» ensembliste</td></tr>
+  </table>
+
+  <div class="card">
+    <strong>P(E) est une algèbre de Boole</strong> : ∪ joue le rôle de +, ∩ le rôle de ×, ∅ le rôle de 0, E le rôle de 1.<br>
+    → Toutes les règles booléennes s'appliquent !<br>
+    <strong>Lois de De Morgan :</strong> A̅∪̅B̄ = Ā∩B̄ &nbsp;·&nbsp; A̅∩̅B̄ = Ā∪B̄
+  </div>
+
+  <h3>Produit cartésien</h3>
+  <div class="card">
+    E×F = {(x;y) | x∈E et y∈F}<br>
+    Si Card(E)=n et Card(F)=p alors <strong>Card(E×F) = n×p</strong>
+  </div>
+
+  <h3>Relations binaires</h3>
+  <div class="card">
+    Une relation ℛ sur E est réflexive / symétrique / antisymétrique / transitive si :
+    <ul>
+      <li><strong>Réflexive :</strong> ∀x∈E, xℛx</li>
+      <li><strong>Symétrique :</strong> xℛy ⇒ yℛx</li>
+      <li><strong>Antisymétrique :</strong> xℛy et yℛx ⇒ x=y</li>
+      <li><strong>Transitive :</strong> xℛy et yℛz ⇒ xℛz</li>
+    </ul>
+    <strong>Relation d'équivalence</strong> = réflexive + symétrique + transitive (partage E en classes)<br>
+    <strong>Relation d'ordre</strong> = réflexive + antisymétrique + transitive (total si tout couple comparable)
+  </div>
+
+  <div class="ex">
+    <h4>📘 Exemples classiques</h4>
+    <pre>
+≤ sur ℝ → ordre total (réflexive, antisymétrique, transitive)
+= sur ℕ → équivalence
+∥ (parallélisme) sur les droites → équivalence
+⊂ sur P(E) → ordre partiel</pre>
+  </div>
+
+  <h3>Applications (fonctions)</h3>
+  <div class="card">
+    f : E→F est une application si <strong>tout élément de E a exactement une image dans F</strong>.<br>
+    <ul>
+      <li><strong>Injective :</strong> f(x)=f(y) ⇒ x=y (au plus un antécédent par élément de F)</li>
+      <li><strong>Surjective :</strong> tout élément de F a au moins un antécédent</li>
+      <li><strong>Bijective :</strong> injective ET surjective ↔ bijection réciproque f⁻¹ existe</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <strong>Image directe :</strong> f(A) = {f(x) : x∈A}<br>
+    <strong>Image réciproque :</strong> f⁻¹(B) = {x∈E : f(x)∈B} (même si f n'est pas bijective)<br>
+    <strong>Composition :</strong> (g∘f)(x) = g(f(x)) — d'abord f, ensuite g
+  </div>
+
+  <div class="ex">
+    <h4>✏️ Exercice <span class="badge med">Moyen</span></h4>
+    <p>E={0,1,...,7}, F={0,1,2,3}. f(x) = reste de x divisé par 3. f est-elle injective ? surjective ? Calculer f({1,3,4}).</p>
+    <details><summary>Correction</summary>
+      <div class="sol">
+        <pre>
+f : 0→0, 1→1, 2→2, 3→0, 4→1, 5→2, 6→0, 7→1
+Non injective (ex. f(0)=f(3)=0).
+Non surjective (3 n'a pas d'antécédent car max=2).
+Wait: F={0,1,2,3} mais f(x) ∈ {0,1,2} → 3 non atteint → non surjective.
+
+f({1,3,4}) = {f(1),f(3),f(4)} = {1, 0, 1} = {0, 1}</pre>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════ CH7 MATRICES ═══════════════ -->
+<section id="ch7">
+  <h2 style="color:#ffa07a">7️⃣ Matrices</h2>
+
+  <h3>Définition</h3>
+  <div class="card">
+    Matrice A de taille n×p : n lignes, p colonnes. Coefficient ligne i colonne j = <strong>aᵢⱼ</strong><br>
+    Si n=p : <strong>matrice carrée d'ordre n</strong>.<br>
+    <strong>Matrice nulle</strong> : tous les aᵢⱼ = 0 &nbsp;·&nbsp; <strong>Matrice identité Iₙ</strong> : aᵢᵢ=1, aᵢⱼ=0 si i≠j
+  </div>
+
+  <h3>Opérations</h3>
+  <table class="tsm">
+    <tr><th>Opération</th><th>Condition</th><th>Résultat</th></tr>
+    <tr><td>A+B</td><td>même taille n×p</td><td>(A+B)ᵢⱼ = aᵢⱼ+bᵢⱼ</td></tr>
+    <tr><td>kA</td><td>k scalaire</td><td>(kA)ᵢⱼ = k×aᵢⱼ</td></tr>
+    <tr><td>A×B</td><td>A est n×p, B est p×q</td><td>C est n×q, cᵢⱼ = Σₖ aᵢₖ×bₖⱼ</td></tr>
+  </table>
+
+  <div class="warn">⚠️ Le produit est <strong>non commutatif</strong> : A×B ≠ B×A en général. Vérifier la compatibilité des tailles.</div>
+
+  <div class="ex">
+    <h4>📘 Produit matriciel</h4>
+    <pre>
+A = (1  3 -2)    B = (-5  1  0  2)
+    (5 -3  4)        ( 2  1 -1 -8)
+                     ( 3  4  0  9)
+
+c₁₁ = 1×(-5)+3×2+(-2)×3 = -5+6-6 = -5
+c₁₂ = 1×1+3×1+(-2)×4 = 1+3-8 = -4
+...
+A×B = (-5  -4  -3  -40)
+      (-19  18   3   70)</pre>
+  </div>
+
+  <h3>Matrices inversibles et systèmes</h3>
+  <div class="card">
+    A est inversible s'il existe B telle que AB = BA = Iₙ. On note B = A⁻¹.<br>
+    <strong>Résolution de systèmes :</strong> le système AX = B (n équations, n inconnues) a pour solution<br>
+    <code>X = A⁻¹ × B</code> (si A est inversible, ce qui se vérifie à la calculatrice).
+  </div>
+
+  <div class="ex">
+    <h4>📘 Résoudre : 2x+5y+2z=1, 5x−3y−2z=2, −x+2y+z=−3</h4>
+    <pre>
+Écriture matricielle : AX = B
+A = ( 2  5  2)    X = (x)    B = ( 1)
+    ( 5 -3 -2)        (y)        ( 2)
+    (-1  2  1)        (z)        (-3)
+
+A⁻¹ = ( 1 -1  -4)
+      (-3  4  14)
+      ( 7 -9 -31)
+
+X = A⁻¹B = (x)   = (11)
+            (y)   = (-37)
+            (z)   = (82)</pre>
+  </div>
+
+  <div class="ex">
+    <h4>✏️ Exercice <span class="badge easy">Facile</span></h4>
+    <p>Calculer A×B avec A=<code>[[1,2],[3,0]]</code> et B=<code>[[5,2],[0,3]]</code>. Puis calculer B×A. Sont-ils égaux ?</p>
+    <details><summary>Correction</summary>
+      <div class="sol">
+        <pre>
+AB = (1×5+2×0  1×2+2×3) = (5  8)
+     (3×5+0×0  3×2+0×3)   (15 6)
+
+BA = (5×1+2×3  5×2+2×0) = (11 10)
+     (0×1+3×3  0×2+3×0)   (9  0)
+
+AB ≠ BA → produit non commutatif !</pre>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════ CH8 GRAPHES ═══════════════ -->
+<section id="ch8">
+  <h2 style="color:#a88fff">8️⃣ Graphes</h2>
+
+  <h3>Définitions</h3>
+  <div class="card">
+    Un <strong>graphe orienté</strong> = ensemble S de sommets + ensemble A d'arcs (sᵢ, sⱼ).<br>
+    <strong>Boucle</strong> = arc dont l'origine = l'extrémité.<br>
+    <strong>Γ⁺(s)</strong> = successeurs de s (extrémités des arcs partant de s)<br>
+    <strong>Γ⁻(s)</strong> = prédécesseurs de s (origines des arcs arrivant sur s)
+  </div>
+
+  <h3>Matrice d'adjacence</h3>
+  <div class="card">
+    Matrice carrée n×n (n = nb de sommets) où <strong>mᵢⱼ = 1</strong> s'il y a un arc de sᵢ vers sⱼ, <strong>0</strong> sinon.<br>
+    Ligne i = successeurs de sᵢ · Colonne j = prédécesseurs de sⱼ
+  </div>
+
+  <h3>Chemins, circuits</h3>
+  <div class="card">
+    <strong>Chemin :</strong> suite de sommets reliés par des arcs · <strong>longueur</strong> = nombre d'arcs<br>
+    <strong>Chemin hamiltonien :</strong> passe une et une seule fois par chaque sommet<br>
+    <strong>Circuit :</strong> chemin dont le premier et le dernier sommet sont identiques
+  </div>
+
+  <h3>Puissances de la matrice d'adjacence</h3>
+  <div class="fire">🔥 <strong>Propriété clé :</strong> le coefficient (i,j) de Mᵖ donne le <em>nombre de chemins de longueur p</em> reliant sᵢ à sⱼ.</div>
+
+  <div class="ex">
+    <h4>📘 Utilisation de M³</h4>
+    <pre>
+Si M³ contient un coefficient 2 en position (1,3), il y a exactement 2 chemins
+de longueur 3 allant du sommet 1 au sommet 3.
+On peut ensuite les lister explicitement.</pre>
+  </div>
+
+  <h3>Matrices booléennes et fermeture transitive</h3>
+  <div class="card">
+    <strong>Matrice booléenne :</strong> calculer comme d'habitude puis remplacer tout coefficient ≠0 par 1.<br>
+    <strong>Fermeture transitive M̂ :</strong> on ajoute tous les «raccourcis» du graphe.
+  </div>
+
+  <div class="formula">M̂ = M ⊕ M[2] ⊕ M[3] ⊕ … ⊕ M[n−1]</div>
+  <div class="card">
+    En pratique : calculer M+M²+…+M^(n-1) puis remplacer chaque coefficient non nul par 1.<br>
+    M̂ est la matrice d'adjacence du graphe auquel on a ajouté tous les raccourcis (fermeture transitive).
+  </div>
+
+  <div class="ex">
+    <h4>📘 Fermeture transitive — graphe à 4 sommets</h4>
+    <pre>
+M = (0 0 1 1)    M² = (0 1 0 0)    M³ = (0 0 0 1)
+    (0 0 0 1)         (0 0 0 0)         (0 0 0 0)
+    (0 1 0 0)         (0 0 0 1)         (0 0 0 0)
+    (0 0 0 0)         (0 0 0 0)         (0 0 0 0)
+
+M+M²+M³ = (0 1 1 2)    M̂ = (0 1 1 1)
+           (0 0 0 1)          (0 0 0 1)
+           (0 1 0 1)          (0 1 0 1)
+           (0 0 0 0)          (0 0 0 0)</pre>
+  </div>
+
+  <h3>Niveaux et ordonnancement (MPM)</h3>
+  <div class="card">
+    <strong>Graphe sans circuit :</strong> on peut définir des niveaux.<br>
+    Niveau 0 = sommets sans prédécesseur. Niveau n+1 = sommet dont tous les prédécesseurs sont ≤ niveau n.<br>
+    <strong>Méthode MPM :</strong> ordonnancer des tâches en tenant compte des contraintes d'antériorité.
+  </div>
+  <div class="card">
+    <strong>Date au plus tôt t(sᵢ) :</strong> max des (t(sⱼ)+durée(sⱼ)) pour tous les prédécesseurs sⱼ<br>
+    <strong>Date au plus tard T(sᵢ) :</strong> min des (T(sⱼ)−durée(sᵢ)) pour tous les successeurs sⱼ<br>
+    <strong>Marge totale MT = T − t :</strong> si = 0 → <strong>tâche critique</strong> (ne peut pas prendre de retard)
+  </div>
+
+  <div class="ex">
+    <h4>✏️ Exercice <span class="badge med">Moyen</span></h4>
+    <p>Graphe : sommets {A,B,C,D,E}, arcs (A,B),(A,C),(B,D),(C,D),(D,E). M = ?</p>
+    <details><summary>Correction</summary>
+      <div class="sol">
+        <pre>
+En ordonnant A,B,C,D,E :
+
+M = A(0 1 1 0 0)
+    B(0 0 0 1 0)
+    C(0 0 0 1 0)
+    D(0 0 0 0 1)
+    E(0 0 0 0 0)
+
+Γ⁺(A)={B,C}, Γ⁺(B)={D}, Γ⁺(C)={D}, Γ⁺(D)={E}, Γ⁺(E)=∅</pre>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════ QUIZ ═══════════════ -->
+<section id="quiz">
+  <h2>🧠 Mini-quiz — 10 questions</h2>
+  <p style="color:var(--muted);margin-bottom:14px">Répondre avant de déplier !</p>
+  <div class="quiz-section">
+
+    <div class="qz">
+      Convertir (1011 0100)₂ en hexadécimal.
+      <details><summary>Réponse</summary><strong>B4₁₆</strong> (1011=B, 0100=4)</details>
+    </div>
+
+    <div class="qz">
+      Convertir 0,625₁₀ en écriture dyadique.
+      <details><summary>Réponse</summary>0,625×2=1,25→1 / 0,25×2=0,5→0 / 0,5×2=1→1 → <strong>(0,101)₂</strong></details>
+    </div>
+
+    <div class="qz">
+      Calculer PGCD(546, 230) par algorithme d'Euclide.
+      <details><summary>Réponse</summary>546=2×230+86 / 230=2×86+58 / 86=1×58+28 / 58=2×28+2 / 28=14×2+0 → <strong>PGCD=2</strong></details>
+    </div>
+
+    <div class="qz">
+      Par quel chiffre se termine 7⁵⁰ ? (utiliser les congruences modulo 10)
+      <details><summary>Réponse</summary>7¹≡7, 7²≡49≡9, 7³≡63≡3, 7⁴≡21≡1 (mod 10) → cycle de 4. 50=4×12+2 → 7⁵⁰≡7²≡<strong>9</strong></details>
+    </div>
+
+    <div class="qz">
+      La proposition «FAUX ⇒ n'importe quoi» est-elle vraie ou fausse ?
+      <details><summary>Réponse</summary><strong>VRAIE</strong> — P⇒Q est fausse seulement si P=V et Q=F.</details>
+    </div>
+
+    <div class="qz">
+      Simplifier en algèbre de Boole : a + āb.
+      <details><summary>Réponse</summary><strong>a + b</strong> (loi : a + āb = a + b)</details>
+    </div>
+
+    <div class="qz">
+      E={1..6}, A={1,2,3,4}, B={3,4,5,6}. Calculer A∩B, A\B et Ā.
+      <details><summary>Réponse</summary>A∩B={3,4} · A\B={1,2} · Ā={5,6}</details>
+    </div>
+
+    <div class="qz">
+      Une application f : E→F injective avec Card(E)=5, Card(F)=5 est-elle surjective ?
+      <details><summary>Réponse</summary><strong>Oui</strong> — entre deux ensembles finis de même cardinal, injection ⟺ surjection ⟺ bijection.</details>
+    </div>
+
+    <div class="qz">
+      Un graphe a n=4 sommets et sa matrice M vérifie M² = 0 (matrice nulle). Que cela signifie-t-il ?
+      <details><summary>Réponse</summary>Il n'existe aucun chemin de longueur 2 dans ce graphe (pas de 2 arcs consécutifs).</details>
+    </div>
+
+    <div class="qz">
+      Arrondir (11,0101)₂ à 2⁻¹ près au plus proche.
+      <details><summary>Réponse</summary>On garde 1 bit après virgule : 11,0. Le 2e bit = 1 → excès → 11,0 + 0,1 = <strong>(11,1)₂ = 3,5</strong></details>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ EXAMEN ═══════════════ -->
+<section id="exam">
+  <h2>🎯 Exercice type examen — correction complète</h2>
+  <div class="fire">🔥 Durée estimée : 25–30 min. Faire seul avant de regarder !</div>
+
+  <div style="background:#0f0f22;border:1px solid var(--border);border-radius:13px;padding:22px;margin:18px 0">
+    <h3 style="color:var(--text);margin-bottom:16px">Sujet</h3>
+
+    <p><strong>Partie A — Représentation (6 pts)</strong></p>
+    <ol>
+      <li>Convertir <strong>203₁₀</strong> en binaire et en hexadécimal par la méthode des divisions successives.</li>
+      <li>Convertir <strong>0,3125₁₀</strong> en écriture dyadique.</li>
+      <li>Arrondir le résultat de Q2 à 2⁻² par défaut, par excès, au plus proche.</li>
+    </ol>
+
+    <p style="margin-top:14px"><strong>Partie B — Arithmétique modulaire (7 pts)</strong></p>
+    <ol>
+      <li>Décomposer <strong>240</strong> et <strong>72</strong> en facteurs premiers. En déduire PGCD(240,72).</li>
+      <li>Vérifier par l'algorithme d'Euclide.</li>
+      <li>On parcourt une liste circulaire de longueur 72 par sauts de 50. La liste est-elle parcourue entièrement ? Justifier.</li>
+    </ol>
+
+    <p style="margin-top:14px"><strong>Partie C — Logique et Boole (7 pts)</strong></p>
+    <ol>
+      <li>Construire la table de vérité de <code>f = ā·b + a·b̄</code>. À quelle opération logique correspond-elle ?</li>
+      <li>Simplifier par calcul booléen : <code>g = a·b·c + a·b·c̄ + ā·b</code>.</li>
+      <li>Donner la négation de : ∀n∈ℕ, ∃k∈ℕ, n≡0[k+2]. Est-elle vraie ou fausse ?</li>
+    </ol>
+  </div>
+
+  <details>
+    <summary style="font-size:1.05rem;font-weight:700;color:var(--c1);padding:12px 0;cursor:pointer">▶ Voir la correction complète</summary>
+
+    <div style="margin-top:16px">
+      <div class="card">
+        <strong>A.1 — 203₁₀</strong>
+        <pre>
+203÷2=101 r1 / 101÷2=50 r1 / 50÷2=25 r0 / 25÷2=12 r1
+12÷2=6 r0 / 6÷2=3 r0 / 3÷2=1 r1 / 1÷2=0 r1
+
+203₁₀ = 1100 1011₂
+Hex : 1100→C, 1011→B → 203₁₀ = CB₁₆
+Vérif : 12×16+11 = 192+11 = 203 ✓</pre>
+      </div>
+
+      <div class="card">
+        <strong>A.2 — 0,3125₁₀ en dyadique</strong>
+        <pre>
+0,3125 × 2 = 0,625  → 0
+0,625  × 2 = 1,25   → 1
+0,25   × 2 = 0,5    → 0
+0,5    × 2 = 1,0    → 1  STOP
+
+0,3125₁₀ = (0,0101)₂
+Vérif : 1/4+1/16 = 4/16+1/16 = 5/16 = 0,3125 ✓</pre>
+      </div>
+
+      <div class="card">
+        <strong>A.3 — Arrondis de (0,0101)₂ à 2⁻²</strong>
+        <pre>
+On garde 2 bits : 0,01 — le 3e bit = 0
+
+Par défaut     : (0,01)₂ = 0,25₁₀
+Par excès      : (0,01)₂ + (0,01)₂ = (0,10)₂ = 0,5₁₀
+Au plus proche : 3e bit = 0 → par défaut → (0,01)₂</pre>
+      </div>
+
+      <div class="card">
+        <strong>B.1 — Facteurs premiers et PGCD</strong>
+        <pre>
+240 = 2⁴ × 3 × 5
+ 72 = 2³ × 3²
+
+Facteurs communs avec min exposants : 2^min(4,3) × 3^min(1,2) = 2³ × 3 = 24
+
+PGCD(240, 72) = 24</pre>
+      </div>
+
+      <div class="card">
+        <strong>B.2 — Vérification par Euclide</strong>
+        <pre>
+240 = 3×72 + 24
+ 72 = 3×24 + 0  → PGCD = 24 ✓</pre>
+      </div>
+
+      <div class="card">
+        <strong>B.3 — Parcours de liste</strong>
+        <pre>
+PGCD(50, 72) :
+72 = 1×50 + 22 / 50 = 2×22 + 6 / 22 = 3×6 + 4 / 6 = 1×4 + 2 / 4 = 2×2 + 0
+PGCD(50,72) = 2 ≠ 1
+
+Donc la liste n'est PAS parcourue entièrement.
+On ne visitera que les multiples de 2 : indices 0, 2, 4, ..., 70 (36 cases sur 72).</pre>
+      </div>
+
+      <div class="card">
+        <strong>C.1 — Table de vérité de f = ā·b + a·b̄</strong>
+        <table class="tsm">
+          <tr><th>a</th><th>b</th><th>ā·b</th><th>a·b̄</th><th>f</th></tr>
+          <tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+          <tr><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td></tr>
+          <tr><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td></tr>
+        </table>
+        <p>f = 1 seulement quand a≠b → <strong>f est l'opération XOR (ou exclusif)</strong></p>
+      </div>
+
+      <div class="card">
+        <strong>C.2 — Simplifier g = abc + abc̄ + āb</strong>
+        <pre>
+g = ab(c+c̄) + āb = ab×1 + āb = ab + āb = b(a+ā) = b×1 = b
+
+g = b</pre>
+      </div>
+
+      <div class="card">
+        <strong>C.3 — Négation et valeur de vérité</strong>
+        <pre>
+Proposition P : ∀n∈ℕ, ∃k∈ℕ, n≡0[k+2]
+
+Négation P̄ : ∃n∈ℕ, ∀k∈ℕ, n≢0[k+2]
+
+P est-elle vraie ? Prenons n=4 : 4≡0[4+0...] En fait on cherche k tel que (k+2)|n.
+Pour n=4 : k=2 → k+2=4, et 4≡0[4] ✓. Pour n=1 : il faut (k+2)|1, donc k+2=1 impossible (k≥0).
+→ P est fausse (contre-exemple n=1).
+→ La négation P̄ est vraie.</pre>
+      </div>
+    </div>
+  </details>
+</section>
+
+<div style="text-align:center;padding:28px 20px;color:var(--muted);font-size:.87rem;border-top:1px solid var(--border);margin-top:10px">
+  📐 BTS SIO · Mathématiques pour l'Informatique · Lycée Rabelais, Saint-Brieuc · 2023-2024<br>
+  Fiche basée sur le cours officiel · 8 chapitres couverts<br>
+  <span style="color:var(--c1);font-weight:600;">Bon courage pour l'examen ! 💪</span>
+</div>
+
+</body>
+</html>
