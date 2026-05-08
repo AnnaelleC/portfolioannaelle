@@ -183,9 +183,9 @@ const nav = `<a href="#main" class="skip">Aller au contenu</a>
             <svg width="16" height="16" color="var(--accent)"><use href="#ic-layers"/></svg>
             Intégration
           </a>
-          <a href="${root}pages/ateliers/atelier-commande.html" role="menuitem">
-            <svg width="16" height="16" color="var(--accent)"><use href="#ic-db"/></svg>
-            Commande
+          <a href="${root}pages/ateliers/atelier-android-visiteur-dao.html" role="menuitem">
+            <svg width="16" height="16" color="var(--accent)"><use href="#ic-code"/></svg>
+            Android DAO
           </a>
           <a href="${root}pages/ateliers/atelier-fa.html" role="menuitem">
             <svg width="16" height="16" color="var(--accent)"><use href="#ic-code"/></svg>
