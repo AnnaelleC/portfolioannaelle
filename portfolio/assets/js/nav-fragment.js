@@ -195,15 +195,15 @@ const nav = `<a href="#main" class="skip">Aller au contenu</a>
             <svg width="16" height="16" color="var(--accent)"><use href="#ic-layers"/></svg>
             CanisPro
           </a>
+          <a href="${root}pages/ateliers/atelier-picdumidi.html" role="menuitem">
+            <svg width="16" height="16" color="var(--gold)"><use href="#logo-pic"/></svg>
+            PicDuMidi
+          </a>
         </div>
       </li>
       <li class="nav-dropdown nav-item">
         <a class="nav-link" href="#" tabindex="0">Veille</a>
         <div class="dropdown-menu" role="menu">
-          <a href="${root}pages/veilles/veille-cybersecurite.html" role="menuitem">
-            <svg width="16" height="16"><use href="#logo-cyber"/></svg>
-            Cybersécurité
-          </a>
           <a href="${root}pages/veilles/veille-snyk.html" role="menuitem">
             <svg width="16" height="16"><use href="#logo-snyk"/></svg>
             Snyk
