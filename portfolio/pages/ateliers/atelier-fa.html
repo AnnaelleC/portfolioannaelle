@@ -437,6 +437,20 @@
 
     <div class="sub-label" style="margin-top:1.5rem">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      Schéma de base de données — Réservation
+    </div>
+    <figure class="img-card" style="max-width:680px;background:var(--bg-2)">
+      <img class="img-zoomable"
+           src="../../assets/images/Site_Fa/Page_Reservation.png"
+           alt="Schéma base de données réservation"
+           style="object-fit:contain;height:300px"
+           data-lb-src="../../assets/images/Site_Fa/Page_Reservation.png"
+           data-lb-caption="Schéma de la base de données — tables et relations impliquées dans la fonctionnalité de réservation">
+      <figcaption>Schéma BDD — tables et relations pour la gestion des réservations</figcaption>
+    </figure>
+
+    <div class="sub-label" style="margin-top:1.5rem">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
       Configuration de la base de données
     </div>
     <figure class="img-card" style="max-width:680px;background:var(--bg-2)">
@@ -466,122 +480,98 @@
 
     <div class="sub-label">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-      Base DAO &amp; modèles des entités
+      <code>BaseDAO</code>, <code>BaseEvenementDAO</code> &amp; <code>EvenementDAO</code> — fonction <code>setReservation</code>
     </div>
     <div class="carousel" data-carousel data-group="modeles">
       <div class="carousel-viewport">
         <div class="carousel-track">
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Site_Fa/modele_baseDAO_FA.png"
-                 alt="Base DAO"
+                 alt="BaseDAO"
                  data-lb-src="../../assets/images/Site_Fa/modele_baseDAO_FA.png"
-                 data-lb-caption="BaseDAO — classe parente commune à tous les DAO, connexion PDO partagée">
-            <div class="carousel-caption"><code>BaseDAO</code> — classe parente commune, connexion PDO</div>
+                 data-lb-caption="BaseDAO — classe parente commune à tous les DAO, connexion PDO partagée (utilisée par setReservation)">
+            <div class="carousel-caption"><code>BaseDAO</code> — classe parente, connexion PDO partagée par tous les DAO</div>
           </div>
           <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/modele_evenement_FA.png"
-                 alt="Modèle événement"
-                 data-lb-src="../../assets/images/Site_Fa/modele_evenement_FA.png"
-                 data-lb-caption="EvenementDAO — méthodes d'accès aux données des événements (1/2)">
-            <div class="carousel-caption"><code>EvenementDAO</code> — accès aux données événements (1/2)</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/modele_evenement_suite_FA.png"
-                 alt="Modèle événement (suite)"
-                 data-lb-src="../../assets/images/Site_Fa/modele_evenement_suite_FA.png"
-                 data-lb-caption="EvenementDAO — méthodes d'accès aux données des événements (2/2)">
-            <div class="carousel-caption"><code>EvenementDAO</code> — accès aux données événements (2/2)</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/modele_horaire_FA.png"
-                 alt="Modèle horaire"
-                 data-lb-src="../../assets/images/Site_Fa/modele_horaire_FA.png"
-                 data-lb-caption="HoraireDAO — gestion des créneaux horaires des ateliers (1/2)">
-            <div class="carousel-caption"><code>HoraireDAO</code> — gestion des horaires (1/2)</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/modele_horaire_suite_FA.png"
-                 alt="Modèle horaire (suite)"
-                 data-lb-src="../../assets/images/Site_Fa/modele_horaire_suite_FA.png"
-                 data-lb-caption="HoraireDAO — gestion des créneaux horaires des ateliers (2/2)">
-            <div class="carousel-caption"><code>HoraireDAO</code> — gestion des horaires (2/2)</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/modele_tarifs_FA.png"
-                 alt="Modèle tarifs"
-                 data-lb-src="../../assets/images/Site_Fa/modele_tarifs_FA.png"
-                 data-lb-caption="TarifsDAO — gestion des tarifs d'entrée et des ateliers du site">
-            <div class="carousel-caption"><code>TarifsDAO</code> — gestion des tarifs d'entrée</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA.png"
-                 alt="Base événement DAO"
+                 alt="BaseEvenementDAO (1/8)"
                  data-lb-src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA.png"
-                 data-lb-caption="BaseEvenementDAO — méthodes communes aux DAO d'événements (1/7)">
-            <div class="carousel-caption"><code>BaseEvenementDAO</code> — méthodes communes (1/7)</div>
+                 data-lb-caption="BaseEvenementDAO — déclaration de la méthode setReservation et structures communes (1/8)">
+            <div class="carousel-caption"><code>BaseEvenementDAO</code> — déclaration <code>setReservation</code> (1/8)</div>
           </div>
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite.png"
-                 alt="Base événement DAO suite"
+                 alt="BaseEvenementDAO (2/8)"
                  data-lb-src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite.png"
-                 data-lb-caption="BaseEvenementDAO — suite (2/7)">
-            <div class="carousel-caption"><code>BaseEvenementDAO</code> — suite (2/7)</div>
+                 data-lb-caption="BaseEvenementDAO — suite setReservation (2/8)">
+            <div class="carousel-caption"><code>BaseEvenementDAO</code> — <code>setReservation</code> suite (2/8)</div>
           </div>
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite2.png"
-                 alt="Base événement DAO suite 2"
+                 alt="BaseEvenementDAO (3/8)"
                  data-lb-src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite2.png"
-                 data-lb-caption="BaseEvenementDAO — suite (3/7)">
-            <div class="carousel-caption"><code>BaseEvenementDAO</code> — suite (3/7)</div>
+                 data-lb-caption="BaseEvenementDAO — suite setReservation (3/8)">
+            <div class="carousel-caption"><code>BaseEvenementDAO</code> — <code>setReservation</code> suite (3/8)</div>
           </div>
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite3.png"
-                 alt="Base événement DAO suite 3"
+                 alt="BaseEvenementDAO (4/8)"
                  data-lb-src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite3.png"
-                 data-lb-caption="BaseEvenementDAO — suite (4/7)">
-            <div class="carousel-caption"><code>BaseEvenementDAO</code> — suite (4/7)</div>
+                 data-lb-caption="BaseEvenementDAO — suite setReservation (4/8)">
+            <div class="carousel-caption"><code>BaseEvenementDAO</code> — <code>setReservation</code> suite (4/8)</div>
           </div>
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite4.png"
-                 alt="Base événement DAO suite 4"
+                 alt="BaseEvenementDAO (5/8)"
                  data-lb-src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite4.png"
-                 data-lb-caption="BaseEvenementDAO — suite (5/7)">
-            <div class="carousel-caption"><code>BaseEvenementDAO</code> — suite (5/7)</div>
+                 data-lb-caption="BaseEvenementDAO — suite setReservation (5/8)">
+            <div class="carousel-caption"><code>BaseEvenementDAO</code> — <code>setReservation</code> suite (5/8)</div>
           </div>
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite5.png"
-                 alt="Base événement DAO suite 5"
+                 alt="BaseEvenementDAO (6/8)"
                  data-lb-src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite5.png"
-                 data-lb-caption="BaseEvenementDAO — suite (6/7)">
-            <div class="carousel-caption"><code>BaseEvenementDAO</code> — suite (6/7)</div>
+                 data-lb-caption="BaseEvenementDAO — suite setReservation (6/8)">
+            <div class="carousel-caption"><code>BaseEvenementDAO</code> — <code>setReservation</code> suite (6/8)</div>
           </div>
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite6.png"
-                 alt="Base événement DAO suite 6"
+                 alt="BaseEvenementDAO (7/8)"
                  data-lb-src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite6.png"
-                 data-lb-caption="BaseEvenementDAO — suite (7/7)">
-            <div class="carousel-caption"><code>BaseEvenementDAO</code> — suite (7/7)</div>
+                 data-lb-caption="BaseEvenementDAO — suite setReservation (7/8)">
+            <div class="carousel-caption"><code>BaseEvenementDAO</code> — <code>setReservation</code> suite (7/8)</div>
           </div>
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite7.png"
-                 alt="Base événement DAO suite 7"
+                 alt="BaseEvenementDAO (8/8)"
                  data-lb-src="../../assets/images/Site_Fa/modeles_base_evenement_DAO_FA_suite7.png"
-                 data-lb-caption="BaseEvenementDAO — méthodes finales et requêtes PDO préparées">
-            <div class="carousel-caption"><code>BaseEvenementDAO</code> — requêtes PDO préparées</div>
+                 data-lb-caption="BaseEvenementDAO — requêtes PDO préparées, fin de setReservation (8/8)">
+            <div class="carousel-caption"><code>BaseEvenementDAO</code> — requêtes PDO préparées, fin <code>setReservation</code> (8/8)</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Site_Fa/modele_evenement_FA.png"
+                 alt="EvenementDAO (1/2)"
+                 data-lb-src="../../assets/images/Site_Fa/modele_evenement_FA.png"
+                 data-lb-caption="EvenementDAO — hérite de BaseEvenementDAO, implémentation de setReservation (1/2)">
+            <div class="carousel-caption"><code>EvenementDAO</code> — hérite <code>setReservation</code> de BaseEvenementDAO (1/2)</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Site_Fa/modele_evenement_suite_FA.png"
+                 alt="EvenementDAO (2/2)"
+                 data-lb-src="../../assets/images/Site_Fa/modele_evenement_suite_FA.png"
+                 data-lb-caption="EvenementDAO — suite, appel setReservation et gestion PDO (2/2)">
+            <div class="carousel-caption"><code>EvenementDAO</code> — appel <code>setReservation</code>, gestion PDO (2/2)</div>
           </div>
         </div>
       </div>
@@ -608,34 +598,26 @@
 
     <div class="sub-label">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-      Contrôleurs — ControleurEvenement &amp; ControleurHoraire
+      <code>GestionEvenement</code> — <code>case reservation</code>
     </div>
     <div class="carousel" data-carousel data-group="controleurs">
       <div class="carousel-viewport">
         <div class="carousel-track">
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Site_Fa/controleur_evenement_FA.png"
-                 alt="Contrôleur événement"
+                 alt="GestionEvenement — case reservation (1/2)"
                  data-lb-src="../../assets/images/Site_Fa/controleur_evenement_FA.png"
-                 data-lb-caption="ControleurEvenement — gestion des requêtes liées aux événements (1/2)">
-            <div class="carousel-caption"><code>ControleurEvenement</code> — gestion des événements (1/2)</div>
+                 data-lb-caption="GestionEvenement — routage des actions, case reservation : appel de setReservation via EvenementDAO (1/2)">
+            <div class="carousel-caption"><code>GestionEvenement</code> — <code>case reservation</code>, appel <code>setReservation</code> (1/2)</div>
           </div>
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Site_Fa/controleur_evenment_FA_suite.png"
-                 alt="Contrôleur événement (suite)"
+                 alt="GestionEvenement — case reservation (2/2)"
                  data-lb-src="../../assets/images/Site_Fa/controleur_evenment_FA_suite.png"
-                 data-lb-caption="ControleurEvenement — gestion des requêtes liées aux événements (2/2)">
-            <div class="carousel-caption"><code>ControleurEvenement</code> — gestion des événements (2/2)</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/controleur_horaire_FA.png"
-                 alt="Contrôleur horaire"
-                 data-lb-src="../../assets/images/Site_Fa/controleur_horaire_FA.png"
-                 data-lb-caption="ControleurHoraire — gestion des créneaux horaires et disponibilités">
-            <div class="carousel-caption"><code>ControleurHoraire</code> — gestion des créneaux horaires</div>
+                 data-lb-caption="GestionEvenement — suite du case reservation, redirection vers la vue après traitement (2/2)">
+            <div class="carousel-caption"><code>GestionEvenement</code> — <code>case reservation</code>, redirection vue (2/2)</div>
           </div>
         </div>
       </div>
@@ -661,8 +643,79 @@
     </div>
 
     <div class="sub-label">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <code>vueEvenementDetails</code> — code de la réservation
+    </div>
+    <div class="carousel" data-carousel data-group="vues">
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Site_Fa/vue_event_detail_FA.png"
+                 alt="vueEvenementDetails (1/7)"
+                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_FA.png"
+                 data-lb-caption="vueEvenementDetails — début du template, affichage des informations de l'événement (1/7)">
+            <div class="carousel-caption"><code>vueEvenementDetails</code> — début du template (1/7)</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Site_Fa/vue_event_detail_suite2_FA.png"
+                 alt="vueEvenementDetails (2/7)"
+                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite2_FA.png"
+                 data-lb-caption="vueEvenementDetails — suite (2/7)">
+            <div class="carousel-caption"><code>vueEvenementDetails</code> — suite (2/7)</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Site_Fa/vue_event_detail_suite3_FA.png"
+                 alt="vueEvenementDetails (3/7)"
+                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite3_FA.png"
+                 data-lb-caption="vueEvenementDetails — suite (3/7)">
+            <div class="carousel-caption"><code>vueEvenementDetails</code> — suite (3/7)</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Site_Fa/vue_event_detail_suite4_FA.png"
+                 alt="vueEvenementDetails (4/7)"
+                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite4_FA.png"
+                 data-lb-caption="vueEvenementDetails — suite (4/7)">
+            <div class="carousel-caption"><code>vueEvenementDetails</code> — suite (4/7)</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Site_Fa/vue_event_detail_suite5_FA.png"
+                 alt="vueEvenementDetails (5/7)"
+                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite5_FA.png"
+                 data-lb-caption="vueEvenementDetails — suite (5/7)">
+            <div class="carousel-caption"><code>vueEvenementDetails</code> — suite (5/7)</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Site_Fa/vue_event_detail_suite6_FA.png"
+                 alt="vueEvenementDetails (6/7)"
+                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite6_FA.png"
+                 data-lb-caption="vueEvenementDetails — suite (6/7)">
+            <div class="carousel-caption"><code>vueEvenementDetails</code> — suite (6/7)</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Site_Fa/vue_event_detail_suite7_FA.png"
+                 alt="vueEvenementDetails (7/7)"
+                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite7_FA.png"
+                 data-lb-caption="vueEvenementDetails — formulaire de réservation, fin du template (7/7)">
+            <div class="carousel-caption"><code>vueEvenementDetails</code> — formulaire de réservation (7/7)</div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Précédent">&#8249;</button>
+      <button class="carousel-btn carousel-next" aria-label="Suivant">&#8250;</button>
+      <div class="carousel-counter"></div>
+      <div class="carousel-dots"></div>
+    </div>
+
+    <div class="sub-label" style="margin-top:1.5rem">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      Interfaces de l'application
+      Résultat — Vue utilisateur
     </div>
     <div class="carousel" data-carousel data-group="app">
       <div class="carousel-viewport">
@@ -688,95 +741,8 @@
                  src="../../assets/images/Site_Fa/reservation_1_evenement_FA.png"
                  alt="Réservation d'un événement"
                  data-lb-src="../../assets/images/Site_Fa/reservation_1_evenement_FA.png"
-                 data-lb-caption="Réservation d'un événement — formulaire de sélection du créneau horaire">
-            <div class="carousel-caption">Réservation d'un atelier — sélection du créneau</div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-btn carousel-prev" aria-label="Précédent">&#8249;</button>
-      <button class="carousel-btn carousel-next" aria-label="Suivant">&#8250;</button>
-      <div class="carousel-counter"></div>
-      <div class="carousel-dots"></div>
-    </div>
-
-    <div class="sub-label" style="margin-top:1.5rem">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-      Code des vues PHP
-    </div>
-    <div class="carousel" data-carousel data-group="vues">
-      <div class="carousel-viewport">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/vues_accueil_FA.png"
-                 alt="Vue accueil PHP"
-                 data-lb-src="../../assets/images/Site_Fa/vues_accueil_FA.png"
-                 data-lb-caption="Vue accueil — template PHP de la page d'accueil du site">
-            <div class="carousel-caption">Vue accueil — template PHP</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/vues_listes_evenements_FA.png"
-                 alt="Vue liste événements"
-                 data-lb-src="../../assets/images/Site_Fa/vues_listes_evenements_FA.png"
-                 data-lb-caption="Vue liste événements — affichage dynamique du catalogue depuis la BDD">
-            <div class="carousel-caption">Vue liste événements — affichage dynamique</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/vue_event_detail_FA.png"
-                 alt="Vue détail événement"
-                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_FA.png"
-                 data-lb-caption="Vue détail événement — fiche complète avec horaires et tarifs (1/7)">
-            <div class="carousel-caption">Vue détail événement (1/7)</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/vue_event_detail_suite2_FA.png"
-                 alt="Vue détail événement suite 2"
-                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite2_FA.png"
-                 data-lb-caption="Vue détail événement — suite (2/7)">
-            <div class="carousel-caption">Vue détail événement (2/7)</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/vue_event_detail_suite3_FA.png"
-                 alt="Vue détail événement suite 3"
-                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite3_FA.png"
-                 data-lb-caption="Vue détail événement — suite (3/7)">
-            <div class="carousel-caption">Vue détail événement (3/7)</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/vue_event_detail_suite4_FA.png"
-                 alt="Vue détail événement suite 4"
-                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite4_FA.png"
-                 data-lb-caption="Vue détail événement — suite (4/7)">
-            <div class="carousel-caption">Vue détail événement (4/7)</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/vue_event_detail_suite5_FA.png"
-                 alt="Vue détail événement suite 5"
-                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite5_FA.png"
-                 data-lb-caption="Vue détail événement — suite (5/7)">
-            <div class="carousel-caption">Vue détail événement (5/7)</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/vue_event_detail_suite6_FA.png"
-                 alt="Vue détail événement suite 6"
-                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite6_FA.png"
-                 data-lb-caption="Vue détail événement — suite (6/7)">
-            <div class="carousel-caption">Vue détail événement (6/7)</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Site_Fa/vue_event_detail_suite7_FA.png"
-                 alt="Vue détail événement suite 7"
-                 data-lb-src="../../assets/images/Site_Fa/vue_event_detail_suite7_FA.png"
-                 data-lb-caption="Vue détail événement — fin du template avec formulaire de réservation (7/7)">
-            <div class="carousel-caption">Vue détail événement — formulaire de réservation (7/7)</div>
+                 data-lb-caption="Réservation d'un événement — formulaire de sélection du créneau horaire, rendu par vueEvenementDetails">
+            <div class="carousel-caption">Réservation d'un atelier — sélection du créneau (résultat <code>vueEvenementDetails</code>)</div>
           </div>
         </div>
       </div>

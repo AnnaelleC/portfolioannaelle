@@ -199,7 +199,7 @@
   border-left:3px solid var(--accent);
   border-radius:var(--radius); padding:.9rem 1.1rem;
   text-decoration:none; color:var(--text);
-  transition:background .15s, border-color .15s;
+  transition:background .15s, border-color .15s; 
 }
 .doc-download:hover { background:var(--surface); border-color:var(--border-h); }
 .doc-download-icon {
@@ -331,9 +331,9 @@
     </div>
     <figure class="img-card">
       <img class="img-zoomable"
-           src="../../assets/images/CanisPro/Organisation/Github versions.png"
+           src="../../assets/images/CanisPro/Organisation/Github_versions.png"
            alt="Historique des versions GitHub"
-           data-lb-src="../../assets/images/CanisPro/Organisation/Github versions.png"
+           data-lb-src="../../assets/images/CanisPro/Organisation/Github_versions.png"
            data-lb-caption="Historique des commits GitHub — versioning de l'application par l'équipe">
       <figcaption>Historique des commits GitHub — versioning collaboratif</figcaption>
     </figure>
@@ -373,9 +373,9 @@
     </div>
     <figure class="img-card" style="margin-bottom:1.2rem">
       <img class="img-zoomable s-code"
-           src="../../assets/images/CanisPro/Architecture/phpdoc, (src)Controller+DataFixtures.png"
+           src="../../assets/images/CanisPro/Architecture/phpdoc,%20(src)Controller+DataFixtures.png"
            alt="Controllers DataFixtures phpDoc"
-           data-lb-src="../../assets/images/CanisPro/Architecture/phpdoc, (src)Controller+DataFixtures.png"
+           data-lb-src="../../assets/images/CanisPro/Architecture/phpdoc,%20(src)Controller+DataFixtures.png"
            data-lb-caption="src/Controller + DataFixtures — documentation phpDoc générée">
       <figcaption>Contrôleurs, Fixtures et documentation phpDoc</figcaption>
     </figure>
@@ -388,7 +388,7 @@
       <div class="carousel-viewport">
         <div class="carousel-track">
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/CanisPro/Architecture/Templates(1).png"
                  alt="Templates Twig partie 1"
                  data-lb-src="../../assets/images/CanisPro/Architecture/Templates(1).png"
@@ -396,7 +396,7 @@
             <div class="carousel-caption">Templates Twig — arborescence par rôle (1/3)</div>
           </div>
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/CanisPro/Architecture/Templates(2).png"
                  alt="Templates Twig partie 2"
                  data-lb-src="../../assets/images/CanisPro/Architecture/Templates(2).png"
@@ -404,7 +404,7 @@
             <div class="carousel-caption">Templates Twig — espace membre &amp; admin (2/3)</div>
           </div>
           <div class="carousel-slide">
-            <img class="s-code"
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/CanisPro/Architecture/Templates(3).png"
                  alt="Templates Twig partie 3"
                  data-lb-src="../../assets/images/CanisPro/Architecture/Templates(3).png"
@@ -452,9 +452,9 @@
     </div>
     <figure class="img-card" style="margin-bottom:1.2rem">
       <img class="img-zoomable s-db"
-           src="../../assets/images/CanisPro/Modeles/Diagramme de classe.png"
+           src="../../assets/images/CanisPro/Modeles/Diagramme_de_classe.png"
            alt="Diagramme de classe"
-           data-lb-src="../../assets/images/CanisPro/Modeles/Diagramme de classe.png"
+           data-lb-src="../../assets/images/CanisPro/Modeles/Diagramme_de_classe.png"
            data-lb-caption="Diagramme de classe UML — attributs et relations entre les entités Doctrine">
       <figcaption>Diagramme de classe UML — par Calixta DELAGE</figcaption>
     </figure>
@@ -489,21 +489,8 @@
     </div>
 
     <div class="sub-label">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
-      Contrôleur associé — <code>VisiteurController.php</code>
-    </div>
-    <div class="code-block" aria-label="VisiteurController routes">
-<span class="cm">// Routes publiques — accessibles sans authentification</span>
-<span class="kw">#[Route(</span><span class="str">'/'</span><span class="kw">,</span> name: <span class="str">'accueil'</span><span class="kw">)]</span>         <span class="fn">accueil</span>()
-<span class="kw">#[Route(</span><span class="str">'/cours'</span><span class="kw">,</span> name: <span class="str">'cours'</span><span class="kw">)]</span>           <span class="fn">listeCours</span>()
-<span class="kw">#[Route(</span><span class="str">'/seances'</span><span class="kw">,</span> name: <span class="str">'seances'</span><span class="kw">)]</span>       <span class="fn">listeSeances</span>()
-<span class="kw">#[Route(</span><span class="str">'/informations'</span><span class="kw">,</span> name: <span class="str">'infos'</span><span class="kw">)]</span>   <span class="fn">informations</span>()
-<span class="kw">#[Route(</span><span class="str">'/contact'</span><span class="kw">,</span> name: <span class="str">'contact'</span><span class="kw">)]</span>       <span class="fn">contact</span>()
-    </div>
-
-    <div class="sub-label" style="margin-top:1rem">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      Captures d'écran — vue visiteur
+      Résultat — Vue visiteur
     </div>
     <div class="carousel" data-carousel>
       <div class="carousel-viewport">
@@ -518,9 +505,9 @@
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Menu%20visiteur.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Menu_visiteur.png"
                  alt="Menu visiteur"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Menu%20visiteur.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Menu_visiteur.png"
                  data-lb-caption="Menu de navigation — vue visiteur non connecté">
             <div class="carousel-caption">Menu de navigation — visiteur non connecté</div>
           </div>
@@ -534,9 +521,9 @@
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/S%C3%A9ances.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Seances.png"
                  alt="Page séances"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/S%C3%A9ances.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Séances.png"
                  data-lb-caption="Séances disponibles — créneaux individuels et collectifs">
             <div class="carousel-caption">Séances disponibles — créneaux individuels et collectifs</div>
           </div>
@@ -592,134 +579,106 @@
         Un membre connecté accède à son espace personnel : consulter et modifier son profil propriétaire, gérer ses chiens (ajout, modification, voir les séances inscrites) et inscrire un chien à une séance.
       </p>
     </div>
-
     <div class="sub-label">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-      Contrôleur associé — <code>MembreController.php</code>
-    </div>
-    <div class="code-block" aria-label="MembreController routes">
-<span class="kw">#[Route(</span><span class="str">'/espace-personnel'</span><span class="kw">,</span> name: <span class="str">'espace_personnel'</span><span class="kw">)]</span>
-<span class="kw">public function</span> <span class="fn">espaceProprietaire</span>(): Response {
-    <span class="kw">$proprietaire</span> = <span class="kw">$this</span>-><span class="fn">getUser</span>()-><span class="fn">getProprietaire</span>();
-    <span class="kw">return</span> <span class="kw">$this</span>-><span class="fn">render</span>(<span class="str">'membre/espace_personnel.html.twig'</span>, [<span class="str">'proprietaire'</span> => <span class="kw">$proprietaire</span>]);
-}
-
-<span class="kw">#[Route(</span><span class="str">'/espace-chien'</span><span class="kw">,</span> name: <span class="str">'espace_chien'</span><span class="kw">)]</span>
-<span class="kw">public function</span> <span class="fn">espaceChien</span>(): Response {
-    <span class="kw">$chiens</span> = <span class="kw">$this</span>-><span class="fn">getUser</span>()-><span class="fn">getProprietaire</span>()-><span class="fn">getChiens</span>();
-    <span class="kw">return</span> <span class="kw">$this</span>-><span class="fn">render</span>(<span class="str">'membre/espace_chien.html.twig'</span>, [<span class="str">'chiens'</span> => <span class="kw">$chiens</span>]);
-}
-
-<span class="kw">#[Route(</span><span class="str">'/espace-chien/seances/{id}'</span><span class="kw">,</span> name: <span class="str">'chien_inscrit_seance'</span><span class="kw">)]</span>
-<span class="kw">public function</span> <span class="fn">voirSeancesChien</span>(ChienRepository <span class="kw">$repo</span>, <span class="kw">int</span> <span class="kw">$id</span>): Response {
-    <span class="kw">$chien</span> = <span class="kw">$repo</span>-><span class="fn">find</span>(<span class="kw">$id</span>);
-    <span class="kw">return</span> <span class="kw">$this</span>-><span class="fn">render</span>(<span class="str">'membre/chien_seances.html.twig'</span>, [
-        <span class="str">'chien'</span>        => <span class="kw">$chien</span>,
-        <span class="str">'inscriptions'</span> => <span class="kw">$chien</span>-><span class="fn">getInscriptions</span>(),
-    ]);
-}
-    </div>
-
-    <div class="sub-label" style="margin-top:1rem">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      Captures d'écran — espace membre
+      Résultat — Vue membre
     </div>
     <div class="carousel" data-carousel>
       <div class="carousel-viewport">
         <div class="carousel-track">
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Arriver%20%C3%A0%20l%27espace%20membre.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Arriver_a_l'espace_membre.png"
                  alt="Arriver à l'espace membre"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Arriver%20%C3%A0%20l%27espace%20membre.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Arriver_a_l'espace_membre.png"
                  data-lb-caption="Accès à l'espace membre après connexion">
             <div class="carousel-caption">Accès à l'espace membre après connexion</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Menu%20espace%20membre.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Menu_espace_membre.png"
                  alt="Menu espace membre"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Menu%20espace%20membre.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Menu_espace_membre.png"
                  data-lb-caption="Menu de navigation — vue membre connecté">
             <div class="carousel-caption">Menu de navigation — membre connecté</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Mon%20espace.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Mon_espace.png"
                  alt="Mon espace personnel"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Mon%20espace.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Mon_espace.png"
                  data-lb-caption="Mon espace — informations personnelles du propriétaire">
             <div class="carousel-caption">Mon espace — profil du propriétaire</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Modifier%20le%20propri%C3%A9taire_info%20du%20compte.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Modifier_le_proprietaire_info_du_compte.png"
                  alt="Modifier le propriétaire"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Modifier%20le%20propri%C3%A9taire_info%20du%20compte.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Modifier_le_proprietaire_info_du_compte.png"
                  data-lb-caption="Modification du profil propriétaire — formulaire">
             <div class="carousel-caption">Modifier le profil propriétaire</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/G%C3%A9rer%20les%20chiens_Voir%20mes%20chiens.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Gerer_les_chiens_Voir_mes_chiens.png"
                  alt="Voir mes chiens"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/G%C3%A9rer%20les%20chiens_Voir%20mes%20chiens.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Gerer_les_chiens_Voir_mes_chiens.png"
                  data-lb-caption="Espace chien — liste des chiens du propriétaire">
             <div class="carousel-caption">Espace chien — liste des compagnons</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Ajouter%20un%20compagnon.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Ajouter_un_compagnon.png"
                  alt="Ajouter un compagnon"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Ajouter%20un%20compagnon.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Ajouter_un_compagnon.png"
                  data-lb-caption="Formulaire — ajout d'un nouveau chien">
             <div class="carousel-caption">Formulaire — ajouter un compagnon</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Modifier%20le%20profil%20d%27un%20chien.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Modifier_le_profil_d'un_chien.png"
                  alt="Modifier le profil d'un chien"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Modifier%20le%20profil%20d%27un%20chien.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Modifier_le_profil_d_un_chien.png"
                  data-lb-caption="Formulaire — modification du profil d'un chien">
             <div class="carousel-caption">Modifier le profil d'un chien</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Inscription%20seance.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Inscription_seance.png"
                  alt="Inscription à une séance"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Inscription%20seance.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Inscription_seance.png"
                  data-lb-caption="Inscription d'un chien à une séance de cours">
             <div class="carousel-caption">Inscrire un chien à une séance</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Navigation%20s%C3%A9ance.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Navigation_seance.png"
                  alt="Navigation séances"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Navigation%20s%C3%A9ance.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Navigation_seance.png"
                  data-lb-caption="Navigation entre les séances — vue membre">
             <div class="carousel-caption">Navigation entre les séances</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/S%C3%A9ance%20de%20Pica.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Seance_de_Pica.png"
                  alt="Séances de Pica"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/S%C3%A9ance%20de%20Pica.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Seance_de_Pica.png"
                  data-lb-caption="Séances inscrites — chien Pica">
             <div class="carousel-caption">Séances inscrites — chien Pica</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/S%C3%A9ance%20de%20Suki.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Seance_de_Suki.png"
                  alt="Séances de Suki"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/S%C3%A9ance%20de%20Suki.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Seance_de_Suki.png"
                  data-lb-caption="Séances inscrites — chien Suki">
             <div class="carousel-caption">Séances inscrites — chien Suki</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/S%C3%A9ances%20de%20PInto.png"
+                 src="../../assets/images/CanisPro/Visiteur-Membre/Seances_de_PInto.png"
                  alt="Séances de Pinto"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/S%C3%A9ances%20de%20PInto.png"
+                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Seances_de_Pinto.png"
                  data-lb-caption="Séances inscrites — chien Pinto">
             <div class="carousel-caption">Séances inscrites — chien Pinto</div>
           </div>
@@ -745,58 +704,41 @@
     </div>
 
     <div class="sub-label">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-      Contrôleur associé — <code>AdminController.php</code>
-    </div>
-    <div class="code-block" aria-label="AdminController routes">
-<span class="cm">// Accès restreint au rôle ADMIN — gestion CRUD complète</span>
-<span class="kw">#[IsGranted(</span><span class="str">'ROLE_ADMIN'</span><span class="kw">)]</span>
-<span class="kw">class</span> <span class="fn">AdminController</span> <span class="kw">extends</span> <span class="fn">AbstractController</span>
-{
-    <span class="kw">#[Route(</span><span class="str">'/admin/chiens'</span><span class="kw">)]</span>     <span class="fn">gererChiens</span>()       <span class="cm">// liste + CRUD</span>
-    <span class="kw">#[Route(</span><span class="str">'/admin/cours'</span><span class="kw">)]</span>      <span class="fn">gererCours</span>()        <span class="cm">// liste + CRUD</span>
-    <span class="kw">#[Route(</span><span class="str">'/admin/proprietaires'</span><span class="kw">)]</span> <span class="fn">gererProprietaires</span>() <span class="cm">// liste + CRUD</span>
-    <span class="kw">#[Route(</span><span class="str">'/admin/inscriptions'</span><span class="kw">)]</span> <span class="fn">gererInscriptions</span>() <span class="cm">// liste + CRUD</span>
-    <span class="kw">#[Route(</span><span class="str">'/admin/seances'</span><span class="kw">)]</span>    <span class="fn">gererSeances</span>()      <span class="cm">// liste + CRUD</span>
-}
-    </div>
-
-    <div class="sub-label" style="margin-top:1rem">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      Captures d'écran — back-office admin
+      Résultat — Vue administrateur
     </div>
     <div class="carousel" data-carousel>
       <div class="carousel-viewport">
         <div class="carousel-track">
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Admin/G%C3%A9rer%20les%20chiens.png"
+                 src="../../assets/images/CanisPro/Admin/Gerer_les_chiens.png"
                  alt="Admin — gérer les chiens"
-                 data-lb-src="../../assets/images/CanisPro/Admin/G%C3%A9rer%20les%20chiens.png"
+                 data-lb-src="../../assets/images/CanisPro/Admin/Gerer_les_chiens.png"
                  data-lb-caption="Administration — tableau de gestion des chiens (liste, CRUD)">
             <div class="carousel-caption">Admin — gestion des chiens (liste + CRUD)</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Admin/G%C3%A9rer%20les%20cours.png"
+                 src="../../assets/images/CanisPro/Admin/Gerer_les_cours.png"
                  alt="Admin — gérer les cours"
-                 data-lb-src="../../assets/images/CanisPro/Admin/G%C3%A9rer%20les%20cours.png"
+                 data-lb-src="../../assets/images/CanisPro/Admin/Gerer_les_cours.png"
                  data-lb-caption="Administration — tableau de gestion des cours">
             <div class="carousel-caption">Admin — gestion des cours</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Admin/Gestion%20propri%C3%A9taire.png"
+                 src="../../assets/images/CanisPro/Admin/Gestion_proprietaire.png"
                  alt="Admin — gestion propriétaires"
-                 data-lb-src="../../assets/images/CanisPro/Admin/Gestion%20propri%C3%A9taire.png"
+                 data-lb-src="../../assets/images/CanisPro/Admin/Gestion_proprietaire.png"
                  data-lb-caption="Administration — gestion des propriétaires">
             <div class="carousel-caption">Admin — gestion des propriétaires</div>
           </div>
           <div class="carousel-slide">
             <img class="s-app"
-                 src="../../assets/images/CanisPro/Admin/Gestion%20inscription.png"
+                 src="../../assets/images/CanisPro/Admin/Gestion_inscription.png"
                  alt="Admin — gestion inscriptions"
-                 data-lb-src="../../assets/images/CanisPro/Admin/Gestion%20inscription.png"
+                 data-lb-src="../../assets/images/CanisPro/Admin/Gestion_inscription.png"
                  data-lb-caption="Administration — gestion des inscriptions aux séances">
             <div class="carousel-caption">Admin — gestion des inscriptions</div>
           </div>

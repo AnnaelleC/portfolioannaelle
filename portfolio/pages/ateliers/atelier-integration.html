@@ -396,21 +396,161 @@
       <figcaption>Routage par paramètre GET — séparation Modèle / Vue / Contrôleur</figcaption>
     </figure>
 
-    <!-- Résultat : 4 pages de l'app — carousel -->
+    <!-- Modèles — carousel -->
+    <div class="sub-label" style="margin-top:1.5rem">
+      <svg width="13" height="13"><use href="#ic-db"/></svg>
+      Modèles
+    </div>
+    <div class="carousel" data-carousel data-group="modeles">
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_modeles_base.png" alt="Base.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_base.png"
+                 data-lb-caption="Base.php — encapsulation de la connexion PDO avec gestion des erreurs">
+            <div class="carousel-caption"><code>Base.php</code> — connexion PDO</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_modeles_ateliers.png" alt="Ateliers.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_ateliers.png"
+                 data-lb-caption="Ateliers.php — entité atelier avec ses attributs">
+            <div class="carousel-caption"><code>Ateliers.php</code> — entité atelier</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_modeles_salles.png" alt="Salles.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_salles.png"
+                 data-lb-caption="Salles.php — entité salle avec ses attributs">
+            <div class="carousel-caption"><code>Salles.php</code> — entité salle</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_modeles_fichiers_XML.png" alt="FichierXML.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_fichiers_XML.png"
+                 data-lb-caption="FichierXML.php — lecture des ateliers via SimpleXML">
+            <div class="carousel-caption"><code>FichierXML.php</code> — lecture SimpleXML</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_modeles_fichiers_JSON.png" alt="FichierJSON.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_fichiers_JSON.png"
+                 data-lb-caption="FichierJSON.php — lecture des salles depuis le fichier JSON">
+            <div class="carousel-caption"><code>FichierJSON.php</code> — lecture JSON</div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Précédent">&#8249;</button>
+      <button class="carousel-btn carousel-next" aria-label="Suivant">&#8250;</button>
+      <div class="carousel-counter"></div>
+      <div class="carousel-dots"></div>
+    </div>
+
+    <!-- Contrôleurs — carousel -->
+    <div class="sub-label" style="margin-top:1.5rem">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      Contrôleurs
+    </div>
+    <div class="carousel" data-carousel data-group="controleurs">
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_controleur_globales.png" alt="gestionGlobale.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_controleur_globales.png"
+                 data-lb-caption="gestionGlobale.php — contrôleur principal (routage global)">
+            <div class="carousel-caption"><code>gestionGlobale.php</code> — contrôleur principal</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_controleur_atelier.png" alt="gestionAteliers.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_controleur_atelier.png"
+                 data-lb-caption="gestionAteliers.php — contrôleur des ateliers XML">
+            <div class="carousel-caption"><code>gestionAteliers.php</code> — ateliers XML</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_controleur_salles.png" alt="gestionSalles.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_controleur_salles.png"
+                 data-lb-caption="gestionSalles.php — contrôleur des salles JSON">
+            <div class="carousel-caption"><code>gestionSalles.php</code> — salles JSON</div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Précédent">&#8249;</button>
+      <button class="carousel-btn carousel-next" aria-label="Suivant">&#8250;</button>
+      <div class="carousel-counter"></div>
+      <div class="carousel-dots"></div>
+    </div>
+
+    <!-- Vues PHP — carousel -->
+    <div class="sub-label" style="margin-top:1.5rem">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      Vues PHP
+    </div>
+    <div class="carousel" data-carousel data-group="vues">
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_index.png" alt="index.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_index.png"
+                 data-lb-caption="index.php — point d'entrée de l'application, routage par paramètre GET">
+            <div class="carousel-caption"><code>index.php</code> — point d'entrée, routage GET</div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_vues_atelier.png" alt="vueAteliers.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_vues_atelier.png"
+                 data-lb-caption="vueAteliers.php — vue de la liste des ateliers">
+            <div class="carousel-caption"><code>vueAteliers.php</code></div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_vues_salles.png" alt="vueSalles.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_vues_salles.png"
+                 data-lb-caption="vueSalles.php — vue de la liste des salles (JSON)">
+            <div class="carousel-caption"><code>vueSalles.php</code></div>
+          </div>
+          <div class="carousel-slide">
+            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
+                 src="../../assets/images/Integration/journee_integration_vues_apropos.png" alt="vueAPropos.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_vues_apropos.png"
+                 data-lb-caption="vueAPropos.php — vue de la page à propos">
+            <div class="carousel-caption"><code>vueAPropos.php</code></div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Précédent">&#8249;</button>
+      <button class="carousel-btn carousel-next" aria-label="Suivant">&#8250;</button>
+      <div class="carousel-counter"></div>
+      <div class="carousel-dots"></div>
+    </div>
+
+    <!-- Config BDD — image seule zoomable -->
+    <div class="sub-label" style="margin-top:1.5rem">
+      <svg width="13" height="13"><use href="#ic-db"/></svg>
+      Configuration base de données
+    </div>
+    <figure class="img-card" style="max-width:560px">
+      <img class="img-zoomable"
+           src="../../assets/images/Integration/journee_integration_configBD.png"
+           alt="Configuration BDD"
+           style="height:auto"
+           data-lb-src="../../assets/images/Integration/journee_integration_configBD.png"
+           data-lb-caption="Fichier .env — paramètres DSN, utilisateurs restreints, connexion PDO">
+      <figcaption>Fichier <code>.env</code> — paramètres DSN, utilisateurs restreints, connexion PDO</figcaption>
+    </figure>
+
+    <!-- Résultat — vue utilisateur -->
     <div class="sub-label" style="margin-top:1.5rem">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-      Résultat — pages de l'application
+      Résultat — Vue utilisateur
     </div>
     <div class="carousel" data-carousel data-group="app-pages">
       <div class="carousel-viewport">
         <div class="carousel-track">
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_tickets.png" alt="Accueil"
-                 data-lb-src="../../assets/images/Integration/journee_integration_index.png"
-                 data-lb-caption="Page d'accueil — index.php">
-            <div class="carousel-caption">Accueil — <code>index.php</code></div>
-          </div>
           <div class="carousel-slide">
             <img class="s-app"
                  src="../../assets/images/Integration/journee_integration_ateliers.png" alt="Ateliers"
@@ -439,146 +579,6 @@
       <div class="carousel-counter"></div>
       <div class="carousel-dots"></div>
     </div>
-
-    <!-- Vues PHP — carousel -->
-    <div class="sub-label" style="margin-top:1.5rem">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-      Vues PHP
-    </div>
-    <div class="carousel" data-carousel data-group="vues">
-      <div class="carousel-viewport">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_vues_atelier.png" alt="vueAteliers.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_vues_atelier.png"
-                 data-lb-caption="vueAteliers.php — vue de la liste des ateliers">
-            <div class="carousel-caption"><code>vueAteliers.php</code></div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_vues_salles.png" alt="vueSalles.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_vues_salles.png"
-                 data-lb-caption="vueSalles.php — vue de la liste des salles (JSON)">
-            <div class="carousel-caption"><code>vueSalles.php</code></div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_vues_apropos.png" alt="vueAPropos.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_vues_apropos.png"
-                 data-lb-caption="vueAPropos.php — vue de la page à propos">
-            <div class="carousel-caption"><code>vueAPropos.php</code></div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-btn carousel-prev" aria-label="Précédent">&#8249;</button>
-      <button class="carousel-btn carousel-next" aria-label="Suivant">&#8250;</button>
-      <div class="carousel-counter"></div>
-      <div class="carousel-dots"></div>
-    </div>
-
-    <!-- Contrôleurs — carousel -->
-    <div class="sub-label" style="margin-top:1.5rem">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-      Contrôleurs
-    </div>
-    <div class="carousel" data-carousel data-group="controleurs">
-      <div class="carousel-viewport">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_controleur_globales.png" alt="gestionGlobale.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_controleur_globales.png"
-                 data-lb-caption="gestionGlobale.php — contrôleur principal (routage global)">
-            <div class="carousel-caption"><code>gestionGlobale.php</code> — contrôleur principal</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_controleur_atelier.png" alt="gestionAteliers.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_controleur_atelier.png"
-                 data-lb-caption="gestionAteliers.php — contrôleur des ateliers XML">
-            <div class="carousel-caption"><code>gestionAteliers.php</code> — ateliers XML</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_controleur_salles.png" alt="gestionSalles.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_controleur_salles.png"
-                 data-lb-caption="gestionSalles.php — contrôleur des salles JSON">
-            <div class="carousel-caption"><code>gestionSalles.php</code> — salles JSON</div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-btn carousel-prev" aria-label="Précédent">&#8249;</button>
-      <button class="carousel-btn carousel-next" aria-label="Suivant">&#8250;</button>
-      <div class="carousel-counter"></div>
-      <div class="carousel-dots"></div>
-    </div>
-
-    <!-- Modèles — carousel (taille uniforme s-code) -->
-    <div class="sub-label" style="margin-top:1.5rem">
-      <svg width="13" height="13"><use href="#ic-db"/></svg>
-      Modèles
-    </div>
-    <div class="carousel" data-carousel data-group="modeles">
-      <div class="carousel-viewport">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_modeles_base.png" alt="Base.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_base.png"
-                 data-lb-caption="Base.php — encapsulation de la connexion PDO avec gestion des erreurs">
-            <div class="carousel-caption"><code>Base.php</code> — connexion PDO</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_modeles_ateliers.png" alt="Ateliers.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_ateliers.png"
-                 data-lb-caption="Ateliers.php — entité atelier avec ses attributs">
-            <div class="carousel-caption"><code>Ateliers.php</code> — entité atelier</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_modeles_salles.png" alt="Salles.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_salles.png"
-                 data-lb-caption="Salles.php — entité salle avec ses attributs">
-            <div class="carousel-caption"><code>Salles.php</code> — entité salle</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_modeles_fichiers_XML.png" alt="FichierXML.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_fichiers_XML.png"
-                 data-lb-caption="FichierXML.php — lecture des ateliers via SimpleXML">
-            <div class="carousel-caption"><code>FichierXML.php</code> — lecture SimpleXML</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-code"
-                 src="../../assets/images/Integration/journee_integration_modeles_fichiers_JSON.png" alt="FichierJSON.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_fichiers_JSON.png"
-                 data-lb-caption="FichierJSON.php — lecture des salles depuis le fichier JSON">
-            <div class="carousel-caption"><code>FichierJSON.php</code> — lecture JSON</div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-btn carousel-prev" aria-label="Précédent">&#8249;</button>
-      <button class="carousel-btn carousel-next" aria-label="Suivant">&#8250;</button>
-      <div class="carousel-counter"></div>
-      <div class="carousel-dots"></div>
-    </div>
-
-    <!-- Config BDD — image seule zoomable -->
-    <div class="sub-label" style="margin-top:1.5rem">
-      <svg width="13" height="13"><use href="#ic-db"/></svg>
-      Configuration base de données
-    </div>
-    <figure class="img-card" style="max-width:560px">
-      <img class="img-zoomable"
-           src="../../assets/images/Integration/journee_integration_configBD.png"
-           alt="Configuration BDD"
-           style="height:auto"
-           data-lb-src="../../assets/images/Integration/journee_integration_configBD.png"
-           data-lb-caption="Fichier .env — paramètres DSN, utilisateurs restreints, connexion PDO">
-      <figcaption>Fichier <code>.env</code> — paramètres DSN, utilisateurs restreints, connexion PDO</figcaption>
-    </figure>
 
   <br>
   <!-- ══════════════════════════════════════
