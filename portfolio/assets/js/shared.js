@@ -265,6 +265,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     img.addEventListener('click', function() {
+      var carousel = img.closest('.carousel');
+      if (carousel) {
+        var imgs = Array.from(carousel.querySelectorAll('[data-lb-src]'));
+        var idx  = imgs.indexOf(img);
+        lbOpen(imgs.map(function(i) { return { src: i.dataset.lbSrc, caption: i.dataset.lbCaption || '' }; }), idx);
+        return;
+      }
       var group = img.closest('[data-group]');
       if (group) {
         var imgs = Array.from(group.querySelectorAll('[data-lb-src]'));

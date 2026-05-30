@@ -63,7 +63,7 @@
     <div class="veille-intro-grid reveal">
       <div class="card veille-stat"><div class="veille-stat-num">2015</div><div class="veille-stat-label">Fondé à Tel-Aviv par Guy Podjarny</div></div>
       <div class="card veille-stat"><div class="veille-stat-num">+1 M</div><div class="veille-stat-label">Développeurs l'utilisent dans le monde</div></div>
-      <div class="card veille-stat"><div class="veille-stat-num">SaaS</div><div class="veille-stat-label">Modèle cloud + CLI + IDE plugins</div></div>
+      <div class="card veille-stat"><div class="veille-stat-num">SaaS (Software as a Service)</div><div class="veille-stat-label">Disponible dans le cloud, avec une interface web, une ligne de commande et des extensions pour les IDE.</div></div>
       <div class="card veille-stat"><div class="veille-stat-num">Free</div><div class="veille-stat-label">Plan gratuit disponible (open source)</div></div>
     </div>
   </div>
@@ -94,50 +94,15 @@
             "Snyk repense la sécurité comme un outil de productivité pour les développeurs, pas comme un obstacle en fin de chaîne."
           </p>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem">
-          <span class="tag tag-green">Shift Left Security</span>
-          <span class="tag tag-teal">Dépendances SCA</span>
-          <span class="tag tag-blue">SAST</span>
-          <span class="tag tag-violet">IaC Security</span>
-        </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-label reveal">Fonctionnalités</div>
-    <h2 class="section-heading reveal">Ce que fait <em>Snyk</em></h2>
-    <ul class="feat-list reveal d1" style="margin-top:1.5rem">
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div><strong>Snyk Open Source (SCA)</strong> — Analyse les dépendances npm, Composer, pip, Maven… et détecte les vulnérabilités CVE connues, avec suggestion de la version corrigée.</div>
-      </li>
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div><strong>Snyk Code (SAST)</strong> — Analyse statique du code source JavaScript, PHP, Python, Java… pour détecter les patterns de code dangereux (injections, mauvaise gestion des secrets).</div>
-      </li>
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div><strong>Snyk Container</strong> — Scanne les images Docker pour les vulnérabilités dans les packages système (apt, apk) et les couches de base.</div>
-      </li>
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div><strong>Snyk IaC</strong> — Vérifie les fichiers Terraform, Kubernetes YAML, CloudFormation contre les mauvaises configurations de sécurité.</div>
-      </li>
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div><strong>Fix automatique</strong> — Génère automatiquement des pull requests pour mettre à jour les dépendances vulnérables vers une version sécurisée.</div>
-      </li>
-    </ul>
   </div>
 </section>
 
 <section class="section section--alt">
   <div class="container">
     <div class="section-label reveal">Intégration</div>
-    <h2 class="section-heading reveal">Partout dans le <em>workflow</em></h2>
+    <h2 class="section-heading reveal">Partout dans le <em>flux de travail</em></h2>
     <div class="integration-grid reveal d1" style="margin-top:1.5rem">
       <div class="card int-card card--lift">
         <!-- VS Code icon -->
@@ -201,35 +166,6 @@
   </div>
 </section>
 
-<section class="section section--alt">
-  <div class="container">
-    <div class="section-label reveal">Veille concurrentielle</div>
-    <h2 class="section-heading reveal">Alternatives à <em>Snyk</em></h2>
-    <div class="competitor-grid reveal d1" style="margin-top:1.5rem">
-      <div class="card comp-alt-card card--lift">
-        <h3 class="comp-alt-name">SonarQube</h3>
-        <p class="comp-alt-desc">Analyse de code statique open source — détection des bugs, vulnérabilités et code smells. Plus complet pour le SAST mais plus complexe à déployer.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:.4rem"><span class="tag tag-blue">SAST avancé</span><span class="tag tag-gray">Self-hosted</span></div>
-      </div>
-      <div class="card comp-alt-card card--lift">
-        <h3 class="comp-alt-name">Dependabot</h3>
-        <p class="comp-alt-desc">Outil GitHub natif — mise à jour automatique des dépendances vulnérables. Gratuit mais moins configurable que Snyk et sans SAST.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:.4rem"><span class="tag tag-green">Gratuit</span><span class="tag tag-gray">GitHub natif</span></div>
-      </div>
-      <div class="card comp-alt-card card--lift">
-        <h3 class="comp-alt-name">OWASP Dependency-Check</h3>
-        <p class="comp-alt-desc">Outil open source OWASP pour analyser les dépendances Java, .NET, PHP… Gratuit et intégrable en CI, moins ergonomique.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:.4rem"><span class="tag tag-green">Open source</span><span class="tag tag-gold">OWASP</span></div>
-      </div>
-      <div class="card comp-alt-card card--lift">
-        <h3 class="comp-alt-name">Veracode</h3>
-        <p class="comp-alt-desc">Plateforme enterprise complète — SAST, DAST, SCA. Très précis mais très coûteux, réservé aux grandes organisations.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:.4rem"><span class="tag tag-violet">Enterprise</span><span class="tag tag-red">Coûteux</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section">
   <div class="container">
     <div class="section-label reveal">Méthodologie</div>
@@ -238,32 +174,32 @@
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1.5rem" class="reveal d2">
       <div class="card source-card">
         <div class="source-name"><svg width="15" height="15" color="var(--accent)"><use href="#ic-rss"/></svg>Feedly</div>
-        <p class="source-desc">Agrégateur RSS utilisé pour centraliser les flux Snyk Blog, CISA Advisories, CVE Database et actualités DevSecOps en un seul endroit.</p>
+        <p class="source-desc">outil de veille technologique qui rassemble les actualités et alertes de cybersécurité provenant de plusieurs sites spécialisés dans une seule interface.</p>
         <ul class="source-feeds">
-          <li>Flux Snyk Blog</li>
-          <li>CISA Advisories</li>
-          <li>CVE Database (NVD)</li>
-          <li>The Hacker News — SecOps</li>
+          <li>Blog Snyk (vulnérabilités et sécurité applicative)</li>
+          <li>Alertes CISA (agence américaine de cybersécurité)</li>
+          <li>Base CVE/NVD (référentiel des failles de sécurité connues)</li>
+          <li>The Hacker News (actualités en cybersécurité)</li>
         </ul>
       </div>
       <div class="card source-card">
         <div class="source-name"><svg width="15" height="15" color="var(--accent)"><use href="#ic-book"/></svg>Snyk Blog officiel</div>
-        <p class="source-desc">Source principale — articles techniques approfondis, rapports annuels State of Open Source Security, annonces produit et études de cas DevSecOps.</p>
+        <p class="source-desc">permet de suivre l'actualité de la sécurité applicative, les vulnérabilités et les évolutions des pratiques DevSecOps.</p>
         <ul class="source-feeds">
-          <li>State of Open Source Security</li>
-          <li>State of DevSecOps Report</li>
-          <li>Articles techniques Snyk Code</li>
-          <li>Nouvelles fonctionnalités</li>
+          <li>Rapports sur la sécurité des logiciels open source</li>
+          <li>Études et tendances DevSecOps</li>
+          <li>Articles techniques sur la détection des vulnérabilités</li>
+          <li>Nouveautés et mises à jour de Snyk</li>
         </ul>
       </div>
       <div class="card source-card">
         <div class="source-name"><svg width="15" height="15" color="var(--accent)"><use href="#ic-github"/></svg>GitHub &amp; NVD</div>
-        <p class="source-desc">Suivi des releases GitHub de Snyk et consultation de la base NVD (National Vulnerability Database) pour croiser les CVE détectées.</p>
+        <p class="source-desc">permettent de suivre les mises à jour des outils ainsi que les vulnérabilités de sécurité connues afin de maintenir un environnement informatique sécurisé.</p>
         <ul class="source-feeds">
-          <li>github.com/snyk — releases</li>
-          <li>NVD (nvd.nist.gov)</li>
-          <li>GitHub Advisory Database</li>
-          <li>Changelog Dependabot</li>
+          <li>Nouvelles versions et mises à jour de Snyk</li>
+          <li>Vulnérabilités référencées (CVE)</li>
+          <li>Alertes de sécurité sur les dépendances</li>
+          <li>Correctifs et recommandations de sécurité</li>
         </ul>
       </div>
     </div>

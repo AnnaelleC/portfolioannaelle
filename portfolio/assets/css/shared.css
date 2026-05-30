@@ -1506,7 +1506,7 @@ html:not([data-theme="light"]) .card::before{
 .img-card img.contain{ object-fit:contain; padding:.5rem; }
 
 /* ── Zoom wrap (injecté par shared.js sur [data-lb-src]) ── */
-.img-zoom-wrap{ position:relative; display:block; line-height:0; overflow:visible; }
+.img-zoom-wrap{ position:relative; display:block; line-height:0; overflow:hidden; }
 .img-zoom-wrap img{ transition:opacity .2s; display:block; width:100%; }
 
 /* ── Rectangle légende (hover + survol diapo) ── */
