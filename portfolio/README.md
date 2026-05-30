@@ -78,3 +78,121 @@ bash
 git config pull.ff only
 git pull --no-rebase origin main
 ```
+
+## Commandes Git essentielles
+
+### Vérifier l’état du dépôt
+
+```bash id="qk2v7n"
+git status
+```
+
+---
+
+### Ajouter les fichiers
+
+```bash id="m9v1sa"
+git add .
+```
+
+---
+
+### Faire un commit
+
+```bash id="c8x2lp"
+git commit -m "message"
+```
+
+---
+
+### Envoyer sur GitHub
+
+```bash id="z1d6rq"
+git push origin main
+```
+
+---
+
+## Problèmes fréquents
+
+### Commit bloqué (erreur GPG ou signature)
+
+```bash id="t5k0vn"
+git commit --no-gpg-sign -m "message"
+```
+
+Désactiver la signature :
+
+```bash id="b3m8qa"
+git config --global commit.gpgsign false
+```
+
+---
+
+### Problème lors d’un pull
+
+Solution recommandée :
+
+```bash id="h7p1xd"
+git pull --rebase origin main
+```
+
+Solution classique :
+
+```bash id="l4c9we"
+git pull origin main
+```
+
+---
+
+### Changer de branche
+
+```bash id="u9n3qx"
+git branch
+git switch nom_branche
+```
+
+---
+
+## Réinitialisation
+
+Annuler des modifications locales :
+
+```bash id="r2m8ty"
+git restore nom_fichier
+```
+
+Réinitialisation complète (attention) :
+
+```bash id="f6x1qp"
+git reset --hard
+```
+
+---
+
+## Bonnes pratiques
+
+* Vérifier `git status` avant chaque commit
+* Sauvegarder les fichiers avant Git (Ctrl + S)
+* Faire des commits réguliers et clairs
+* Ne pas pousser de code cassé sur main
+
+---
+
+## Problèmes d’affichage dans Codespaces
+
+Si le site ne s’ouvre pas :
+
+* Vérifier que le port 3000 est ouvert
+* Relancer `serve -l 3000`
+* Vérifier que le terminal est dans le bon dossier
+
+---
+
+## Objectif du projet
+
+Ce portfolio a pour objectif de :
+
+* présenter des projets BTS SIO
+* démontrer des compétences en développement web
+* structurer un projet complet utilisable en contexte professionnel
