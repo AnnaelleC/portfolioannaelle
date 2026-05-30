@@ -2,62 +2,103 @@
 <html lang="fr" data-theme="light">
 <head>
 <meta charset="UTF-8">
-<!-- Sécurité -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Atelier Pro — PicDuMidiBoutique · Annaëlle Champiau</title>
-<meta name="description" content="Atelier professionnel PicDuMidiBoutique — développement d'une solution de reporting e-commerce.">
+<meta name="description" content="Atelier professionnel PicDuMidiBoutique — tableau de bord d'aide à la décision pour la boutique du Pic du Midi de Bigorre, WordPress + PHP + MySQL, 4 missions progressives.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Baloo+2:wght@400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../assets/css/shared.css">
 <style>
-  /* Sibling nav between ateliers */
-  .sibling-nav {
-    display:flex; justify-content:space-between; align-items:center;
-    padding:1rem 1.75rem; background:var(--bg-2); border-top:1px solid var(--border);
-    font-size:.78rem;
-  }
-  .sibling-link {
-    display:flex; align-items:center; gap:.5rem;
-    color:var(--text-soft); text-decoration:none; font-family:var(--font-mono); font-size:.65rem;
-    letter-spacing:.1em; text-transform:uppercase;
-    transition:color .2s;
-  }
-  .sibling-link:hover { color:var(--accent); }
-  .sibling-label { font-size:.72rem; color:var(--text-muted); font-family:var(--font-body); }
-  .sibling-title { font-weight:500; color:var(--text); }
 
-  /* result-grid — voir shared.css */
+/* ── Sibling nav ── */
+.sibling-nav {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 1.75rem; background:var(--bg-2); border-top:1px solid var(--border);
+  font-size:.78rem;
+}
+.sibling-link {
+  display:flex; align-items:center; gap:.5rem;
+  color:var(--text-soft); text-decoration:none; font-family:var(--font-mono); font-size:.65rem;
+  letter-spacing:.1em; text-transform:uppercase; transition:color .2s;
+}
+.sibling-link:hover { color:var(--accent); }
+.sibling-label { font-size:.72rem; color:var(--text-muted); font-family:var(--font-body); }
+
+/* ── Label de sous-section ── */
+.sub-label {
+  font-size:.72rem; font-weight:600; color:var(--text-muted);
+  text-transform:uppercase; letter-spacing:.1em;
+  margin:1.5rem 0 .7rem;
+  display:flex; align-items:center; gap:.45rem;
+}
+.sub-label::after { content:''; flex:1; height:1px; background:var(--border); }
+
+/* ── Mission steps ── */
+.mission-steps { display:flex; flex-direction:column; gap:0; }
+.mission-step {
+  display:grid; grid-template-columns:auto 1fr;
+  gap:0 1.25rem; position:relative;
+}
+.mission-step::before {
+  content:''; position:absolute; left:19px; top:42px;
+  width:2px; bottom:-2px; background:var(--border);
+}
+.mission-step:last-child::before { display:none; }
+.step-num-wrap { padding-top:.2rem; }
+.step-num {
+  width:38px; height:38px; border-radius:50%;
+  background:var(--bg-2); border:2px solid var(--accent);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-mono); font-size:.72rem; font-weight:700;
+  color:var(--accent); flex-shrink:0;
+}
+.step-body { padding-bottom:2rem; }
+.step-title { font-family:var(--font-mono); font-size:.85rem; font-weight:600; color:var(--text); margin-bottom:.35rem; }
+.step-desc  { font-size:.84rem; color:var(--text-soft); line-height:1.8; }
+
+/* ── Résultat grid ── */
+.result-grid { grid-template-columns: repeat(4, 1fr); }
+@media(max-width:640px) { .result-grid { grid-template-columns: repeat(2,1fr); } }
+
 </style>
 </head>
 <body>
 <script src="../../assets/js/nav-fragment.js"></script>
 
-<!-- Page hero -->
+<!-- ════ HERO ════ -->
 <header class="page-hero">
   <div class="page-hero-inner">
     <p class="page-breadcrumb">
       <a href="../../../index.html">Accueil</a> ›
-      <a href="#">Ateliers Professionnels</a> ›
+      <a href="../../../index.html#projets">Ateliers Professionnels</a> ›
       PicDuMidiBoutique
     </p>
     <div class="project-header">
-      <div class="project-logo-placeholder" aria-hidden="true"></div>
-      <div class="project-header-text">
+      <div class="project-logo" style="background:rgba(56,189,248,.08);border:1px solid rgba(56,189,248,.2)">
+        <svg width="34" height="34" fill="none" stroke="#38bdf8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <polyline points="3 17 9 11 13 15 18 9 21 12"/>
+          <polygon points="12 2 15.5 8.5 22 9.5 17 14.5 18.5 21 12 17.5 5.5 21 7 14.5 2 9.5 8.5 8.5"/>
+        </svg>
+      </div>
+      <div>
         <div class="project-meta">
           <span class="tag tag-violet">Atelier Professionnel</span>
           <span class="tag tag-blue">PHP</span>
           <span class="tag tag-gray">MySQL</span>
-          <span class="tag tag-gray">WordPress</span>
+          <span class="tag tag-teal">WordPress</span>
           <span class="tag tag-gray">Elementor</span>
           <span class="tag tag-gray">TablePress</span>
+          <span class="tag tag-gray">DomPDF</span>
           <span class="tag tag-gold">Travail individuel</span>
         </div>
         <h1 class="page-title" style="margin-bottom:.4rem">PicDuMidi<em>Boutique</em></h1>
         <p class="project-desc-intro">
-          Développement d'un tableau de bord d'aide à la décision pour la boutique du Pic du Midi de Bigorre — site WordPress évoluant progressivement de statique à dynamique, interactif, puis interactif avancé avec génération de PDF.
+          Développement d'un tableau de bord d'aide à la décision pour la boutique du Pic du Midi de Bigorre —
+          site WordPress évoluant progressivement en 4 missions : de la page statique jusqu'à la génération
+          automatique de rapports PDF, via des fonctions PHP connectées à MySQL et exposées en codes courts.
         </p>
       </div>
     </div>
@@ -68,159 +109,147 @@
 <section class="section">
 <div class="container">
 
-  <!-- Tools -->
+  <!-- ══ Outils & Technologies ═══════════════════════ -->
   <div class="project-section reveal">
-    <h2 class="project-section-title">Outils utilisés</h2>
+    <h2 class="project-section-title">Outils &amp; Technologies</h2>
     <div class="tools-grid">
       <div class="tool-chip">
-        <svg width="15" height="15" color="var(--accent)"><use href="#ic-code"/></svg>
-        PHP — fonctions et codes courts WordPress
+        <svg width="15" height="15" fill="none" stroke="var(--accent)" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        PHP — fonctions, codes courts WordPress
       </div>
       <div class="tool-chip">
-        <svg width="15" height="15" color="var(--accent)"><use href="#ic-db"/></svg>
+        <svg width="15" height="15" fill="none" stroke="var(--accent)" stroke-width="1.5" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
         MySQL / PhpMyAdmin — requêtes et indicateurs
       </div>
       <div class="tool-chip">
-        <svg width="15" height="15" color="var(--accent)"><use href="#ic-code"/></svg>
-        WordPress — CMS, extensions, pages, CSS
+        <svg width="15" height="15" fill="none" stroke="var(--accent)" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        WordPress — CMS, extensions, shortcodes
       </div>
       <div class="tool-chip">
-        <svg width="15" height="15" color="var(--accent)"><use href="#ic-code"/></svg>
+        <svg width="15" height="15" fill="none" stroke="var(--accent)" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         Elementor — constructeur de pages
       </div>
       <div class="tool-chip">
-        <svg width="15" height="15" color="var(--accent)"><use href="#ic-db"/></svg>
-        TablePress — création de tableaux d'indicateurs
+        <svg width="15" height="15" fill="none" stroke="var(--accent)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/></svg>
+        TablePress — tableaux d'indicateurs
       </div>
       <div class="tool-chip">
-        <svg width="15" height="15" color="var(--accent)"><use href="#ic-code"/></svg>
+        <svg width="15" height="15" fill="none" stroke="var(--accent)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         DomPDF — génération de rapports PDF
       </div>
       <div class="tool-chip">
-        <svg width="15" height="15" color="var(--accent)"><use href="#ic-code"/></svg>
+        <svg width="15" height="15" fill="none" stroke="var(--accent)" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         WampServer — serveur local de développement
       </div>
       <div class="tool-chip">
-        <svg width="15" height="15" color="var(--accent)"><use href="#ic-code"/></svg>
-        GanttProject — planification et diagrammes de Gantt
+        <svg width="15" height="15" fill="none" stroke="var(--accent)" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        GanttProject — planification de projet
       </div>
     </div>
   </div>
 
-  <!-- Context -->
+  <!-- ══ Contexte ════════════════════════════════════ -->
   <div class="project-section reveal d1">
     <h2 class="project-section-title">Contexte</h2>
     <div class="context-block">
       <p>
         Initialement dédié à des activités scientifiques centrées sur l'astronomie et la météorologie,
-        le Pic du Midi de Bigorre a connu en 1990 de graves difficultés financières allant jusqu'à
-        menacer sa fermeture.
+        le <strong>Pic du Midi de Bigorre</strong> a connu en 1990 de graves difficultés financières
+        allant jusqu'à menacer sa fermeture. Pour sauvegarder ce patrimoine, le site a ouvert ses portes
+        aux touristes avec la mise en place d'une billetterie, d'un restaurant et d'une boutique souvenirs.
       </p>
       <p>
-        Pour sauvegarder ce patrimoine, le site a ouvert ses portes aux touristes avec la mise en place
-        d'une billetterie pour le musée, d'un restaurant et d'une boutique souvenirs. La communication
-        s'appuie sur un site Web et les offices de tourisme et syndicats d'initiative de la région.
+        Dans ce cadre, l'objectif de cet atelier était de concevoir un <strong>outil d'aide à la décision</strong>
+        pour la boutique du Pic — un tableau de bord avec les principaux indicateurs économiques,
+        intégré dans un site WordPress et enrichi progressivement en <strong>4 missions</strong>.
       </p>
-      <p>
-        Dans ce cadre, l'objectif de cet atelier était de <strong>développer un outil d'aide à la décision
-        pour la boutique du Pic</strong> — un tableau de bord avec les principaux indicateurs à suivre,
-        intégré dans un site WordPress évoluant en 4 missions progressives.
+    </div>
+
+    <div class="card" style="margin-top:1.2rem;border-left:3px solid #38bdf8;background:var(--bg-2)">
+      <p style="font-size:.9rem;color:var(--text-soft);line-height:1.85">
+        <strong style="color:var(--text)">Problématique :</strong>
+        Comment permettre aux responsables de visualiser facilement les indicateurs clés — visiteurs,
+        chiffre d'affaires, moyennes — sans accès direct à la base de données, et d'interagir avec ces
+        données en temps réel, jusqu'à la génération automatique de rapports PDF ?
       </p>
     </div>
   </div>
 
-  <!-- Mission -->
+  <!-- ══ 4 Missions progressives ═════════════════════ -->
   <div class="project-section reveal d2">
-    <h2 class="project-section-title">Mission &amp; Problématiques</h2>
-    <div class="card" style="border-left:3px solid var(--accent);background:var(--bg-2)">
-      <p style="font-size:.92rem;color:var(--text-soft);line-height:1.85">
-        Comment permettre aux responsables de la boutique de visualiser facilement les indicateurs clés
-        (visiteurs, chiffre d'affaires, moyennes) sans accès direct à la base de données, et d'interagir
-        avec ces données en temps réel ?
-        Il fallait concevoir un site WordPress progressivement enrichi — de la page statique jusqu'à la
-        génération automatique de PDF — via des fonctions PHP connectées à MySQL et exposées par des codes courts.
-      </p>
+    <h2 class="project-section-title">4 Missions progressives</h2>
+    <div class="mission-steps">
+
+      <div class="mission-step">
+        <div class="step-num-wrap"><div class="step-num">M1</div></div>
+        <div class="step-body">
+          <div class="step-title">Site statique — Page « Meilleure Journée »</div>
+          <div class="step-desc">
+            Création de la page « Meilleure Journée » dans WordPress via <strong>Elementor</strong>.
+            Intégration d'un tableau d'indicateurs avec <strong>TablePress</strong> (données saisies manuellement),
+            d'une barre latérale personnalisée affichant le <em>top 3 des meilleures journées</em>,
+            le <em>top 3 des articles les plus vendus</em> et un <em>widget météo</em> my-meteo.com.
+            Le smiley de satisfaction est intégré en image statique.
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-step">
+        <div class="step-num-wrap"><div class="step-num">M2</div></div>
+        <div class="step-body">
+          <div class="step-title">Site dynamique — Extension PHP &amp; connexion MySQL</div>
+          <div class="step-desc">
+            Création de l'extension WordPress <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">accesbd.php</code>
+            avec connexion PDO à la base de données. Développement des fonctions PHP et de leurs codes courts associés :
+            <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">fct_getNbVisiteurs()</code>,
+            <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">fct_getCaDuJour()</code>,
+            <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">fct_getCaMoyenParJour()</code>,
+            <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">fct_getCaMoyenParVisiteur()</code>.
+            Le smiley de satisfaction devient dynamique avec une animation CSS clignotante selon le niveau de CA.
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-step">
+        <div class="step-num-wrap"><div class="step-num">M3</div></div>
+        <div class="step-body">
+          <div class="step-title">Site interactif — Filtrage par date</div>
+          <div class="step-desc">
+            Ajout d'un <strong>formulaire HTML de saisie de date</strong> (méthode POST) permettant de
+            consulter les indicateurs d'une journée spécifique. Développement de nouvelles fonctions paramétrées :
+            <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">fct_getDateSaisie()</code>,
+            <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">fct_getTempsDUneDate()</code>,
+            <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">fct_nbVisiteursDUneDate()</code>,
+            <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">fct_caTotalDUneDate()</code>.
+            Création d'un nouveau tableau TablePress « Indicateurs de cette journée » ajouté au menu
+            WordPress sous la catégorie « Zoom… ».
+          </div>
+        </div>
+      </div>
+
+      <div class="mission-step">
+        <div class="step-num-wrap"><div class="step-num">M4</div></div>
+        <div class="step-body">
+          <div class="step-title">Site interactif avancé — Génération de PDF avec DomPDF</div>
+          <div class="step-desc">
+            Intégration de la bibliothèque <strong>DomPDF</strong> pour générer des rapports PDF dynamiques.
+            Développement de
+            <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">fct_getTableauHier()</code>
+            et <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">fct_getTableauHierEnPdf()</code>
+            pour la construction et l'export du tableau des indicateurs de la veille.
+            Le rapport inclut un en-tête avec logo, un pied de page, et le smiley encodé en
+            <strong>base64</strong> via
+            <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">fct_getSmiley2()</code>
+            pour garantir l'affichage dans le PDF.
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
-  <!-- Fonctionnalités -->
+  <!-- ══ Résultats & Apprentissages ══════════════════ -->
   <div class="project-section reveal d1">
-    <h2 class="project-section-title">Missions réalisées</h2>
-    <ul class="feat-list">
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div><strong>Mission 1 — Site statique</strong> — création de la page « Meilleure Journée » avec tableau d'indicateurs (TablePress), barre latérale personnalisée (top 3 jours, top 3 articles, widget météo my-meteo.com), intégration Elementor</div>
-      </li>
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div><strong>Mission 2 — Site dynamique</strong> — création de l'extension WordPress <code>accesbd.php</code>, développement des fonctions PHP (<code>fct_getNbVisiteurs()</code>, <code>fct_getCaDuJour()</code>, <code>fct_getCaMoyenParJour()</code>, <code>fct_getCaMoyenParVisiteur()</code>), codes courts associés, smiley dynamique de satisfaction, CSS additionnel avec animation clignotante</div>
-      </li>
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div><strong>Mission 3 — Site interactif</strong> — formulaire HTML de saisie de date, fonctions PHP paramétrées par date (<code>fct_getDateSaisie()</code>, <code>fct_getTempsDUneDate()</code>, <code>fct_nbVisiteursDUneDate()</code>, <code>fct_caTotalDUneDate()</code>…), nouveau tableau TablePress « Indicateurs de cette journée », ajout dans le menu sous la catégorie « Zoom… »</div>
-      </li>
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div><strong>Mission 4 — Site interactif avancé</strong> — génération de rapport PDF avec la bibliothèque DomPDF (<code>fct_getTableauHier()</code>, <code>fct_getTableauHierEnPdf()</code>), intégration du logo, en-tête et pied de page dans le PDF, smiley encodé en base64 pour l'export (<code>fct_getSmiley2()</code>)</div>
-      </li>
-    </ul>
-  </div>
-
-  <!-- Code example -->
-  <div class="project-section reveal d2">
-    <h2 class="project-section-title">Extraits de code</h2>
-    <p style="font-size:.8rem;color:var(--text-soft);margin-bottom:.75rem">Connexion PDO à la base de données (extension <code>accesbd.php</code>)</p>
-    <div class="code-block" aria-label="Fonction PHP fct_getConnexion">
-<span class="cm">/**
- * Retourne l'objet connexion PDO à la base de données
- * @return PDO $connexion
- */</span>
-<span class="kw">function</span> <span class="fn">fct_getConnexion</span>() {
-    <span class="kw">try</span> {
-        <span class="kw">$connexion</span> = <span class="kw">new</span> <span class="fn">PDO</span>(<span class="str">'mysql:host=localhost;dbname=champiau_bdboutiquePic'</span>,
-                             <span class="str">'consultBD'</span>, <span class="str">'pwdConsultBD'</span>);
-        <span class="kw">$connexion</span>-><span class="fn">exec</span>(<span class="str">'SET NAMES utf8'</span>);
-        <span class="kw">return</span> <span class="kw">$connexion</span>;
-    } <span class="kw">catch</span> (PDOException <span class="kw">$e</span>) {
-        <span class="fn">print</span> <span class="str">"Erreur : "</span> . <span class="kw">$e</span>-><span class="fn">getMessage</span>();
-        <span class="fn">die</span>();
-    }
-}
-    </div>
-    <p style="font-size:.8rem;color:var(--text-soft);margin:.75rem 0">Récupération de la date saisie dans le formulaire (Mission 3)</p>
-    <div class="code-block" aria-label="Fonction PHP fct_getDateSaisie">
-<span class="cm">/**
- * Récupère et retourne la date transmise par le formulaire
- * @return string  date saisie ou "Date non renseignée."
- */</span>
-<span class="kw">function</span> <span class="fn">fct_getDateSaisie</span>() {
-    <span class="kw">if</span> (<span class="fn">isset</span>(<span class="kw">$_POST</span>[<span class="str">'dateSouhaitee'</span>]))
-        <span class="kw">$uneDate</span> = <span class="kw">$_POST</span>[<span class="str">'dateSouhaitee'</span>];
-    <span class="kw">else</span>
-        <span class="kw">$uneDate</span> = <span class="str">"Date non renseignée."</span>;
-    <span class="kw">return</span> <span class="kw">$uneDate</span>;
-}
-<span class="cm">/** code court [dateSaisie] associé à la fonction fct_getDateSaisie */</span>
-<span class="fn">add_shortcode</span>(<span class="str">'dateSaisie'</span>, <span class="str">'fct_getDateSaisie'</span>);
-    </div>
-  </div>
-
-  <!-- Screenshots -->
-  <div class="project-section reveal d1">
-    <h2 class="project-section-title">Captures d'écran</h2>
-    <div class="screenshots-grid">
-      <div class="screenshot-placeholder">Formulaire de filtrage — capture à ajouter</div>
-      <div class="screenshot-placeholder">Tableau d'indicateurs — capture à ajouter</div>
-      <div class="screenshot-placeholder">Résultats par catégorie — capture à ajouter</div>
-      <div class="screenshot-placeholder">Graphique chiffre d'affaires — capture à ajouter</div>
-    </div>
-    <p style="font-size:.75rem;color:var(--text-muted);font-family:var(--font-mono);margin-top:.7rem;font-style:italic">
-      Remplacez les placeholders par les vraies captures dans le HTML.
-    </p>
-  </div>
-
-  <!-- Results -->
-  <div class="project-section reveal d2">
     <h2 class="project-section-title">Résultats &amp; Apprentissages</h2>
     <div class="result-grid">
       <div class="card result-box">
@@ -235,42 +264,57 @@
         <div class="result-num">PDF</div>
         <div class="result-label">Rapport généré avec DomPDF</div>
       </div>
+      <div class="card result-box">
+        <div class="result-num">Live</div>
+        <div class="result-label">Données MySQL en temps réel</div>
+      </div>
     </div>
-    <div class="context-block">
+    <div class="context-block" style="margin-top:1.5rem">
       <p>
-        Cet atelier m'a permis de maîtriser la création d'extensions WordPress, le développement de fonctions PHP
-        connectées à MySQL via PDO, et l'utilisation de codes courts. En progressant du site statique vers
-        un site interactif avancé, j'ai acquis une vision complète du développement full-stack côté CMS :
-        requêtes SQL (agrégations, filtres sur dates), gestion du formulaire POST, génération de PDF avec DomPDF,
-        styles CSS additionnels et planification par diagramme de Gantt.
+        Cet atelier m'a permis de maîtriser la création d'<strong>extensions WordPress</strong>,
+        le développement de fonctions PHP connectées à MySQL via <strong>PDO</strong>,
+        et l'utilisation des <strong>codes courts</strong> pour exposer des données dynamiques.
+        En progressant du site statique vers un site interactif avancé, j'ai acquis une vision
+        complète du développement full-stack côté CMS.
       </p>
       <p>
-        Les indicateurs affichés (nombre de visiteurs, CA total, montant moyen par vente, CA moyen par visiteur)
-        proviennent directement de la base de données et s'actualisent en temps réel selon la date sélectionnée.
-        Exemple de valeurs réelles testées pour le 02/03/2025 : <strong>106 visiteurs</strong>,
-        <strong>841 € de CA total</strong>, <strong>36,57 € moyen par vente</strong>, <strong>7,93 € par visiteur</strong>.
+        Les indicateurs affichés (nombre de visiteurs, CA total, montant moyen par vente,
+        CA moyen par visiteur) s'actualisent en temps réel selon la date sélectionnée.
+        Exemple de valeurs testées pour le <strong>02/03/2025</strong> :
+        <strong>106 visiteurs</strong>, <strong>841 € de CA total</strong>,
+        <strong>36,57 € moyen par vente</strong>, <strong>7,93 € par visiteur</strong>.
       </p>
     </div>
   </div>
 
-  <!-- Compétences validées -->
-  <div class="project-section reveal d1">
+  <!-- ══ Compétences BTS SIO ═══════════════════════ -->
+  <div class="project-section reveal d2">
     <h2 class="project-section-title">Compétences BTS SIO validées</h2>
     <div class="comp-pills-grid">
       <div class="comp-pill">
-        <div class="comp-pill-dot" style="background:#818cf8"></div>
+        <div class="comp-pill-dot" style="background:#38bdf8"></div>
         <span class="comp-pill-code">B1.3</span>
-        <span class="comp-pill-label">Développer la présence en ligne de l'organisation</span>
+        <span class="comp-pill-label">Développer la présence en ligne — intégration WordPress, Elementor, CSS</span>
       </div>
       <div class="comp-pill">
-        <div class="comp-pill-dot" style="background:#c084fc"></div>
-        <span class="comp-pill-code">B1.1</span>
-        <span class="comp-pill-label">Gérer le patrimoine informatique (sauvegardes)</span>
+        <div class="comp-pill-dot" style="background:#818cf8"></div>
+        <span class="comp-pill-code">A1.2</span>
+        <span class="comp-pill-label">Concevoir une solution applicative — extension PHP, fonctions PDO, codes courts</span>
+      </div>
+      <div class="comp-pill">
+        <div class="comp-pill-dot" style="background:#34d399"></div>
+        <span class="comp-pill-code">A1.3</span>
+        <span class="comp-pill-label">Développer une solution — 4 missions progressives, DomPDF, smiley base64</span>
       </div>
       <div class="comp-pill">
         <div class="comp-pill-dot" style="background:#fbbf24"></div>
         <span class="comp-pill-code">B1.4</span>
-        <span class="comp-pill-label">Travailler en mode projet</span>
+        <span class="comp-pill-label">Travailler en mode projet — planification GanttProject, diagramme de Gantt</span>
+      </div>
+      <div class="comp-pill">
+        <div class="comp-pill-dot" style="background:#f87171"></div>
+        <span class="comp-pill-code">B1.1</span>
+        <span class="comp-pill-label">Gérer le patrimoine informatique — sauvegarde, versionnement de l'extension</span>
       </div>
     </div>
   </div>
@@ -279,18 +323,17 @@
 </section>
 </main>
 
-<!-- Sibling navigation between ateliers -->
 <div class="sibling-nav">
-  <div>
+  <div style="text-align:left">
     <div class="sibling-label">Atelier précédent</div>
-    <div class="sibling-title">—</div>
+    <div style="color:var(--text-muted);font-family:var(--font-mono);font-size:.65rem">—</div>
   </div>
   <a href="../competences.html" class="btn btn-outline btn-sm">Voir les compétences</a>
   <div style="text-align:right">
     <div class="sibling-label">Atelier suivant</div>
     <a class="sibling-link" href="atelier-integration.html">
-      Journée d'intégration - Tickets
-      <svg width="14" height="14"><use href="#ic-ext"/></svg>
+      Journée d'intégration
+      <svg width="14" height="14"><use href="#ic-arrow"/></svg>
     </a>
   </div>
 </div>
