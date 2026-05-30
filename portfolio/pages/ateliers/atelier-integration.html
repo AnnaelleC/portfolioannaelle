@@ -413,20 +413,6 @@
           </div>
           <div class="carousel-slide">
             <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
-                 src="../../assets/images/Integration/journee_integration_modeles_ateliers.png" alt="Ateliers.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_ateliers.png"
-                 data-lb-caption="Ateliers.php — entité atelier avec ses attributs">
-            <div class="carousel-caption"><code>Ateliers.php</code> — entité atelier</div>
-          </div>
-          <div class="carousel-slide">
-            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
-                 src="../../assets/images/Integration/journee_integration_modeles_salles.png" alt="Salles.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_salles.png"
-                 data-lb-caption="Salles.php — entité salle avec ses attributs">
-            <div class="carousel-caption"><code>Salles.php</code> — entité salle</div>
-          </div>
-          <div class="carousel-slide">
-            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Integration/journee_integration_modeles_fichiers_XML.png" alt="FichierXML.php"
                  data-lb-src="../../assets/images/Integration/journee_integration_modeles_fichiers_XML.png"
                  data-lb-caption="FichierXML.php — lecture des ateliers via SimpleXML">
@@ -434,10 +420,10 @@
           </div>
           <div class="carousel-slide">
             <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
-                 src="../../assets/images/Integration/journee_integration_modeles_fichiers_JSON.png" alt="FichierJSON.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_fichiers_JSON.png"
-                 data-lb-caption="FichierJSON.php — lecture des salles depuis le fichier JSON">
-            <div class="carousel-caption"><code>FichierJSON.php</code> — lecture JSON</div>
+                 src="../../assets/images/Integration/journee_integration_modeles_ateliers.png" alt="Atelier.php"
+                 data-lb-src="../../assets/images/Integration/journee_integration_modeles_ateliers.png"
+                 data-lb-caption="Atelier.php — entité atelier avec ses attributs">
+            <div class="carousel-caption"><code>Atelier.php</code> — entité atelier</div>
           </div>
         </div>
       </div>
@@ -457,24 +443,10 @@
         <div class="carousel-track">
           <div class="carousel-slide">
             <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
-                 src="../../assets/images/Integration/journee_integration_controleur_globales.png" alt="gestionGlobale.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_controleur_globales.png"
-                 data-lb-caption="gestionGlobale.php — contrôleur principal (routage global)">
-            <div class="carousel-caption"><code>gestionGlobale.php</code> — contrôleur principal</div>
-          </div>
-          <div class="carousel-slide">
-            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
                  src="../../assets/images/Integration/journee_integration_controleur_atelier.png" alt="gestionAteliers.php"
                  data-lb-src="../../assets/images/Integration/journee_integration_controleur_atelier.png"
                  data-lb-caption="gestionAteliers.php — contrôleur des ateliers XML">
             <div class="carousel-caption"><code>gestionAteliers.php</code> — ateliers XML</div>
-          </div>
-          <div class="carousel-slide">
-            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
-                 src="../../assets/images/Integration/journee_integration_controleur_salles.png" alt="gestionSalles.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_controleur_salles.png"
-                 data-lb-caption="gestionSalles.php — contrôleur des salles JSON">
-            <div class="carousel-caption"><code>gestionSalles.php</code> — salles JSON</div>
           </div>
         </div>
       </div>
@@ -506,20 +478,6 @@
                  data-lb-caption="vueAteliers.php — vue de la liste des ateliers">
             <div class="carousel-caption"><code>vueAteliers.php</code></div>
           </div>
-          <div class="carousel-slide">
-            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
-                 src="../../assets/images/Integration/journee_integration_vues_salles.png" alt="vueSalles.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_vues_salles.png"
-                 data-lb-caption="vueSalles.php — vue de la liste des salles (JSON)">
-            <div class="carousel-caption"><code>vueSalles.php</code></div>
-          </div>
-          <div class="carousel-slide">
-            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
-                 src="../../assets/images/Integration/journee_integration_vues_apropos.png" alt="vueAPropos.php"
-                 data-lb-src="../../assets/images/Integration/journee_integration_vues_apropos.png"
-                 data-lb-caption="vueAPropos.php — vue de la page à propos">
-            <div class="carousel-caption"><code>vueAPropos.php</code></div>
-          </div>
         </div>
       </div>
       <button class="carousel-btn carousel-prev" aria-label="Précédent">&#8249;</button>
@@ -527,21 +485,6 @@
       <div class="carousel-counter"></div>
       <div class="carousel-dots"></div>
     </div>
-
-    <!-- Config BDD — image seule zoomable -->
-    <div class="sub-label" style="margin-top:1.5rem">
-      <svg width="13" height="13"><use href="#ic-db"/></svg>
-      Configuration base de données
-    </div>
-    <figure class="img-card" style="max-width:560px">
-      <img class="img-zoomable"
-           src="../../assets/images/Integration/journee_integration_configBD.png"
-           alt="Configuration BDD"
-           style="height:auto"
-           data-lb-src="../../assets/images/Integration/journee_integration_configBD.png"
-           data-lb-caption="Fichier .env — paramètres DSN, utilisateurs restreints, connexion PDO">
-      <figcaption>Fichier <code>.env</code> — paramètres DSN, utilisateurs restreints, connexion PDO</figcaption>
-    </figure>
 
     <!-- Résultat — vue utilisateur -->
     <div class="sub-label" style="margin-top:1.5rem">
