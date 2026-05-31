@@ -354,12 +354,11 @@
   </div>
 
   <!-- ══════════════════════════════════════
-       V1 — APPLICATION MVC PHP
+        APPLICATION MVC PHP
   ══════════════════════════════════════ -->
   <div class="project-section reveal d1">
     <h2 class="project-section-title" style="display:flex;align-items:center;gap:.6rem">
       <svg width="18" height="18"><use href="#logo-php"/></svg>
-      <span class="tag tag-green">V1</span>
       Application MVC PHP
     </h2>
     <ul class="feat-list" style="margin-bottom:1.5rem">
@@ -524,89 +523,7 @@
     </div>
 
   <br>
-  <!-- ══════════════════════════════════════
-       V2 — REFACTORING DAO
-  ══════════════════════════════════════ -->
-  <div class="project-section reveal d2">
-    <h2 class="project-section-title" style="display:flex;align-items:center;gap:.6rem">
-      <svg width="16" height="16"><use href="#logo-mvc"/></svg>
-      <span class="tag tag-blue">V2</span>
-      Base de Données — DAO
-    </h2>
-  <!-- ── Documentation phpDocumentor ── -->
-  <div class="project-section reveal d1">
-    <h2 class="project-section-title">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:.4rem"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      Documentation phpDocumentor
-    </h2>
-    <div class="phpdoc-block">
-      <div class="phpdoc-icon">
-        <svg width="18" height="18" fill="none" stroke="#818cf8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      </div>
-      <div>
-        <p style="font-size:.88rem;color:var(--text);font-weight:600;margin:0 0 .3rem">Génération automatique depuis les commentaires PHPDoc</p>
-        <p style="font-size:.83rem;color:var(--text-soft);line-height:1.75;margin:0">
-          Toutes les classes et méthodes sont commentées avec des annotations <code>@param</code>, <code>@return</code> et <code>@throws</code>.
-          La documentation HTML est générée via la commande :
-        </p>
-        <div class="code-block" style="margin-top:.75rem;font-size:.78rem">php phpDocumentor.phar run -d ./site -t ./documentation</div>
-        <ul style="font-size:.82rem;color:var(--text-soft);line-height:1.8;margin:.75rem 0 0;padding-left:1.1rem">
-          <li><code>-d ./site</code> — dossier source du projet PHP</li>
-          <li><code>-t ./documentation</code> — dossier de sortie HTML généré</li>
-          <li>Résultat : site statique navigable listant toutes les classes, méthodes et leurs signatures typées</li>
-        </ul>
-      </div>
     </div>
-  </div>
-
-  <!-- ── Base de données ── -->
-  <div class="project-section reveal d2">
-    <h2 class="project-section-title">
-      <svg width="16" height="16" color="var(--accent)" style="vertical-align:middle;margin-right:.4rem"><use href="#ic-db"/></svg>
-      Structure de la base de données
-    </h2>
-    <div class="tools-grid">
-      <div class="tool-chip"><svg width="16" height="16"><use href="#logo-mysql"/></svg> Table <strong>Developpeur</strong> — id, nom, prénom</div>
-      <div class="tool-chip"><svg width="16" height="16"><use href="#logo-mysql"/></svg> Table <strong>Competence</strong> — id, nom</div>
-      <div class="tool-chip">
-        <svg width="15" height="15" fill="none" stroke="var(--accent)" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        Droits restreints (<code>JI_Dev_Read</code>)
-      </div>
-      <div class="tool-chip"><svg width="16" height="16"><use href="#logo-mvc"/></svg> Fichier XML <strong>ateliers.xml</strong> — 4 ateliers</div>
-    </div>
-  </div>
-
-  <!-- ── Résultats ── -->
-  <div class="project-section reveal d1">
-    <h2 class="project-section-title">Résultats &amp; Apprentissages</h2>
-    <div class="result-grid">
-      <div class="card result-box">
-        <div class="result-num">2</div>
-        <div class="result-label">Versions livrées (V1 MVC &amp; V2 DAO)</div>
-      </div>
-      <div class="card result-box">
-        <div class="result-num">DAO</div>
-        <div class="result-label">Patron de conception maîtrisé</div>
-      </div>
-      <div class="card result-box">
-        <div class="result-num">100%</div>
-        <div class="result-label">Code documenté (phpDocumentor)</div>
-      </div>
-    </div>
-    <div class="context-block">
-      <p>
-        Cet atelier m'a permis de consolider l'architecture MVC en PHP et de découvrir le patron DAO,
-        qui sépare nettement la logique d'accès aux données de la logique métier. La gestion des droits
-        d'accès à la base de données selon le rôle (<code>JI_Dev_Read</code>) m'a sensibilisée
-        aux bonnes pratiques de sécurité dès la conception.
-      </p>
-      <p>
-        La mise en place de tests unitaires PHPUnit et la génération de documentation phpDocumentor
-        m'ont donné une vision complète du cycle de développement professionnel : conception, codage,
-        test et documentation technique.
-      </p>
-    </div>
-  </div>
 
   <!-- ── Compétences BTS SIO ── -->
   <div class="project-section reveal d2">

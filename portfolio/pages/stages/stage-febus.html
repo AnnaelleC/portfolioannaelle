@@ -578,47 +578,6 @@
     </div>
   </div>
 
-  <!-- ── Résultats ── -->
-  <div class="project-section reveal">
-    <h2 class="project-section-title">Résultats &amp; Apprentissages</h2>
-    <div class="result-grid">
-      <div class="card result-box">
-        <div class="result-num">1</div>
-        <div class="result-label">Module Webmin livré &amp; déployé</div>
-      </div>
-      <div class="card result-box">
-        <div class="result-num">NTP<br><small style="font-size:.7rem">+</small>PTP</div>
-        <div class="result-label">Deux protocoles intégrés</div>
-      </div>
-      <div class="card result-box">
-        <div class="result-num">5 sem.</div>
-        <div class="result-label">Autonomie sur stack Linux / Perl</div>
-      </div>
-    </div>
-    <div class="context-block" style="margin-top:1.5rem">
-      <p>
-        Ce stage m'a offert une immersion dans un environnement technique de haute précision. J'ai découvert
-        le langage <strong style="color:var(--text)">Perl</strong> et son écosystème CGI dans le cadre réel du développement de modules Webmin,
-        tout en approfondissant ma maîtrise de l'administration <strong style="color:var(--text)">Linux</strong> via des
-        <strong style="color:var(--text)">commandes en ligne de commande</strong> — navigation dans l'arborescence système,
-        manipulation des fichiers de configuration, gestion des services avec <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">systemctl</code>,
-        consultation des logs avec <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">journalctl</code>
-        et vérification du statut de synchronisation avec <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">ntpq</code> et <code style="color:var(--accent);font-family:var(--font-mono);font-size:.85em">pmc</code>.
-      </p>
-      <p>
-        J'ai également eu l'occasion de <strong style="color:var(--text)">brasser la baie de brassage réseau</strong> —
-        relier physiquement les câbles entre les équipements (switch, serveurs, points d'accès) —
-        ce qui m'a donné une vision concrète de l'infrastructure réseau sur laquelle reposent les systèmes FEBUS OPTICS.
-      </p>
-      <p>
-        La compréhension des protocoles <strong style="color:var(--text)">NTP et PTP</strong> — jusqu'alors inconnus pour moi — m'a apporté
-        une vision concrète des enjeux de synchronisation temporelle dans les systèmes industriels embarqués.
-        Travailler en autonomie dans un environnement de production réel a renforcé ma rigueur et ma capacité
-        à rédiger une documentation claire à destination des utilisateurs.
-      </p>
-    </div>
-  </div>
-
   <!-- ── Rapport de stage ── -->
   <div class="project-section reveal d1">
     <h2 class="project-section-title">Rapport de stage</h2>
@@ -657,6 +616,44 @@
           </svg>
           Ouvrir
         </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Extraits de code ── -->
+  <div class="project-section reveal d1">
+    <h2 class="project-section-title">Extraits du code</h2>
+    <p style="font-size:.84rem;color:var(--text-soft);line-height:1.9;margin-bottom:1.2rem">
+      Captures des principales vues du module Webmin développé en Perl — formulaire de configuration,
+      affichage du statut de synchronisation et gestion des conditions NTP/PTP.
+    </p>
+    <div class="img-gallery" data-group="code">
+      <div class="img-card">
+        <img src="../../assets/images/Febus_Optics/Vue_Form_NTP.png" alt="Formulaire configuration NTP"
+             style="height:200px;object-fit:contain;background:#f5f5f5;padding:.5rem"
+             data-lb-src="../../assets/images/Febus_Optics/Vue_Form_NTP.png" data-lb-caption="Formulaire de configuration NTP — module Webmin">
+        <div class="img-card-caption">
+          <div class="img-card-title">Formulaire NTP</div>
+          <div class="img-card-desc">Interface de saisie des serveurs NTP, options du démon et application de la configuration via <code style="color:var(--accent);font-family:var(--font-mono);font-size:.8em">/etc/ntp.conf</code>.</div>
+        </div>
+      </div>
+      <div class="img-card">
+        <img src="../../assets/images/Febus_Optics/Vue_Status.png" alt="Vue statut synchronisation"
+             style="height:200px;object-fit:contain;background:#f5f5f5;padding:.5rem"
+             data-lb-src="../../assets/images/Febus_Optics/Vue_Status.png" data-lb-caption="Vue statut — synchronisation NTP/PTP en temps réel">
+        <div class="img-card-caption">
+          <div class="img-card-title">Vue Statut</div>
+          <div class="img-card-desc">Affichage en temps réel du statut de synchronisation : offset, stratum, état du service via <code style="color:var(--accent);font-family:var(--font-mono);font-size:.8em">ntpq</code> et <code style="color:var(--accent);font-family:var(--font-mono);font-size:.8em">pmc</code>.</div>
+        </div>
+      </div>
+      <div class="img-card">
+        <img src="../../assets/images/Febus_Optics/condition_PTP_NTP.png" alt="Conditions PTP/NTP"
+             style="height:200px;object-fit:contain;background:#f5f5f5;padding:.5rem"
+             data-lb-src="../../assets/images/Febus_Optics/condition_PTP_NTP.png" data-lb-caption="Logique conditionnelle NTP/PTP — gestion des modes">
+        <div class="img-card-caption">
+          <div class="img-card-title">Conditions NTP / PTP</div>
+          <div class="img-card-desc">Gestion des modes de synchronisation : bascule entre NTP et PTP selon la configuration, vérification des prérequis réseau.</div>
+        </div>
       </div>
     </div>
   </div>
