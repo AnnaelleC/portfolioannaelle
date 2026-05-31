@@ -300,45 +300,6 @@
     </div>
   </div>
 
-  <!-- ══ Organisation du projet ════════════════════ -->
-  <div class="project-section reveal d1">
-    <h2 class="project-section-title">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:.4rem"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      Organisation du projet
-    </h2>
-    <div class="context-block">
-      <p>
-        Le projet a été piloté avec une <strong>méthode agile</strong> : tableau Kanban sur ClickUp, GANTT pour la répartition des tâches par membre, et versioning GitHub avec des commits réguliers et des branches par fonctionnalité.
-      </p>
-    </div>
-
-    <div class="sub-label">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-      Tableau Kanban — ClickUp
-    </div>
-    <figure class="img-card" style="margin-bottom:1.2rem">
-      <img class="img-zoomable"
-           src="../../assets/images/CanisPro/Organisation/KANBAN.png"
-           alt="Tableau Kanban ClickUp"
-           data-lb-src="../../assets/images/CanisPro/Organisation/KANBAN.png"
-           data-lb-caption="Tableau Kanban sur ClickUp — répartition des tâches par membre et par statut">
-      <figcaption>Tableau Kanban ClickUp — tâches réparties entre les 4 membres</figcaption>
-    </figure>
-
-    <div class="sub-label">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-      Suivi de versions — GitHub
-    </div>
-    <figure class="img-card">
-      <img class="img-zoomable"
-           src="../../assets/images/CanisPro/Organisation/Github_versions.png"
-           alt="Historique des versions GitHub"
-           data-lb-src="../../assets/images/CanisPro/Organisation/Github_versions.png"
-           data-lb-caption="Historique des commits GitHub — versioning de l'application par l'équipe">
-      <figcaption>Historique des commits GitHub — versioning collaboratif</figcaption>
-    </figure>
-  </div>
-
   <!-- ══ Architecture technique ════════════════════ -->
   <div class="project-section reveal d2">
     <h2 class="project-section-title">
@@ -356,217 +317,56 @@
 
     <div class="sub-label">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-      Structure du projet — Entity / Form / Repository / Controller
+      Modèle — Entity · Form · Repository
     </div>
     <figure class="img-card" style="margin-bottom:1.2rem">
       <img class="img-zoomable s-code"
-           src="../../assets/images/CanisPro/Architecture/Entity-Form-Repository.png"
+           src="../../assets/images/CanisPro/modele_form_entity_repo_mvc.png"
            alt="Structure Entity Form Repository"
-           data-lb-src="../../assets/images/CanisPro/Architecture/Entity-Form-Repository.png"
+           data-lb-src="../../assets/images/CanisPro/modele_form_entity_repo_mvc.png"
            data-lb-caption="Structure du projet Symfony — Entity, Form, Repository côte à côte">
       <figcaption>Arborescence <code>src/</code> — Entity · Form · Repository</figcaption>
     </figure>
 
     <div class="sub-label">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-      Controllers · DataFixtures · Documentation phpDoc
+      Contrôleur · DataFixtures
     </div>
     <figure class="img-card" style="margin-bottom:1.2rem">
       <img class="img-zoomable s-code"
-           src="../../assets/images/CanisPro/Architecture/phpdoc_(src)Controller+DataFixtures.png"
-           alt="Controllers DataFixtures phpDoc"
-           data-lb-src="../../assets/images/CanisPro/Architecture/phpdoc_(src)Controller+DataFixtures.png"
-           data-lb-caption="src/Controller + DataFixtures — documentation phpDoc générée">
-      <figcaption>Contrôleurs, Fixtures et documentation phpDoc</figcaption>
+           src="../../assets/images/CanisPro/controller_datafixture_mvc.png"
+           alt="Controllers DataFixtures"
+           data-lb-src="../../assets/images/CanisPro/controller_datafixture_mvc.png"
+           data-lb-caption="src/Controller + DataFixtures — structure MVC">
+      <figcaption>Contrôleurs et DataFixtures — structure MVC</figcaption>
     </figure>
 
     <div class="sub-label">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      Templates Twig — vues par rôle
+      Vue — Templates Twig
     </div>
-    <div class="carousel" data-carousel>
-      <div class="carousel-viewport">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
-                 src="../../assets/images/CanisPro/Architecture/Templates(1).png"
-                 alt="Templates Twig partie 1"
-                 data-lb-src="../../assets/images/CanisPro/Architecture/Templates(1).png"
-                 data-lb-caption="Arborescence templates/ — vues Twig par rôle (1/3)">
-            <div class="carousel-caption">Templates Twig — arborescence par rôle (1/3)</div>
-          </div>
-          <div class="carousel-slide">
-            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
-                 src="../../assets/images/CanisPro/Architecture/Templates(2).png"
-                 alt="Templates Twig partie 2"
-                 data-lb-src="../../assets/images/CanisPro/Architecture/Templates(2).png"
-                 data-lb-caption="Arborescence templates/ — vues membre et admin (2/3)">
-            <div class="carousel-caption">Templates Twig — espace membre &amp; admin (2/3)</div>
-          </div>
-          <div class="carousel-slide">
-            <img style="width:100%;display:block;cursor:zoom-in;height:340px;object-fit:contain;background:var(--bg-2)"
-                 src="../../assets/images/CanisPro/Architecture/Templates(3).png"
-                 alt="Templates Twig partie 3"
-                 data-lb-src="../../assets/images/CanisPro/Architecture/Templates(3).png"
-                 data-lb-caption="Arborescence templates/ — suite des vues (3/3)">
-            <div class="carousel-caption">Templates Twig — suite (3/3)</div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-btn carousel-prev" aria-label="Précédent">&#8249;</button>
-      <button class="carousel-btn carousel-next" aria-label="Suivant">&#8250;</button>
-      <div class="carousel-counter"></div>
-      <div class="carousel-dots"></div>
-    </div>
+    <figure class="img-card" style="margin-bottom:1.2rem">
+      <img class="img-zoomable s-code"
+           src="../../assets/images/CanisPro/vue_twig_html.png"
+           alt="Templates Twig"
+           data-lb-src="../../assets/images/CanisPro/vue_twig_html.png"
+           data-lb-caption="Arborescence templates/ — vues Twig par rôle">
+      <figcaption>Templates Twig — arborescence des vues par rôle</figcaption>
+    </figure>
   </div>
 
-  <!-- ══ Modèles de données ═════════════════════════ -->
+  <!-- ══ Résultats ══════════════════════════════════ -->
   <div class="project-section reveal d1">
-    <h2 class="project-section-title">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:.4rem"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-      Modèles de données
-    </h2>
-    <div class="context-block">
-      <p>
-        La base de données MySQL est gérée par <strong>Doctrine ORM</strong>. Les entités principales sont :
-        <strong>Utilisateur</strong>, <strong>Propriétaire</strong>, <strong>Chien</strong>, <strong>Race</strong>, <strong>NiveauxApprentissage</strong>, <strong>Cours</strong>, <strong>Séance</strong> et <strong>Inscription</strong>.
-      </p>
-    </div>
 
-    <div class="sub-label">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-      Modèle Conceptuel de Données (MCD)
-    </div>
-    <figure class="img-card" style="margin-bottom:1.2rem">
-      <img class="img-zoomable s-db"
-           src="../../assets/images/CanisPro/Modeles/MCD(2).png"
-           alt="Modèle Conceptuel de Données"
-           data-lb-src="../../assets/images/CanisPro/Modeles/MCD(2).png"
-           data-lb-caption="MCD — relations entre toutes les entités du système CanisPro">
-      <figcaption>MCD — relations entre entités (Chien, Propriétaire, Cours, Séance, Inscription…)</figcaption>
-    </figure>
-
-    <div class="sub-label">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-      Diagramme de classe
-    </div>
-    <figure class="img-card" style="margin-bottom:1.2rem">
-      <img class="img-zoomable s-db"
-           src="../../assets/images/CanisPro/Modeles/Diagramme_de_classe.png"
-           alt="Diagramme de classe"
-           data-lb-src="../../assets/images/CanisPro/Modeles/Diagramme_de_classe.png"
-           data-lb-caption="Diagramme de classe UML — attributs et relations entre les entités Doctrine">
-      <figcaption>Diagramme de classe UML — par Calixta DELAGE</figcaption>
-    </figure>
-
-  </div>
-
-  <!-- ══ Vues Visiteur ══════════════════════════════ -->
+  <!-- ══ Résultat Membre ═══════════════════════════ -->
   <div class="project-section reveal d2">
     <h2 class="project-section-title">
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:.4rem"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-      Vues Visiteur
-    </h2>
-    <div class="context-block">
-      <p>
-        Un visiteur non connecté peut consulter l'accueil, le catalogue des cours (Socialisation, Obéissance, Agilité), les séances disponibles, les informations du centre et la page de contact. Il peut aussi s'inscrire ou se connecter.
-      </p>
-    </div>
-
-    <div class="sub-label">
-      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      Résultat — Vue visiteur
-    </div>
-    <div class="carousel" data-carousel>
-      <div class="carousel-viewport">
-        <div class="carousel-track">
-          <div class="carousel-slide">
-            <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Accueil.png"
-                 alt="Page d'accueil"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Accueil.png"
-                 data-lb-caption="Accueil — page d'accueil du site CanisPro Éducation">
-            <div class="carousel-caption">Page d'accueil — CanisPro Éducation</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Menu_visiteur.png"
-                 alt="Menu visiteur"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Menu_visiteur.png"
-                 data-lb-caption="Menu de navigation — vue visiteur non connecté">
-            <div class="carousel-caption">Menu de navigation — visiteur non connecté</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Cours.png"
-                 alt="Page cours"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Cours.png"
-                 data-lb-caption="Catalogue des cours — Socialisation, Obéissance, Agilité">
-            <div class="carousel-caption">Catalogue des cours — Socialisation · Obéissance · Agilité</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Seances.png"
-                 alt="Page séances"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Seances.png"
-                 data-lb-caption="Séances disponibles — créneaux individuels et collectifs">
-            <div class="carousel-caption">Séances disponibles — créneaux individuels et collectifs</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Informations.png"
-                 alt="Page informations"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Informations.png"
-                 data-lb-caption="Page informations — présentation du centre CanisPro">
-            <div class="carousel-caption">Page informations — présentation du centre</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Contact.png"
-                 alt="Page contact"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Contact.png"
-                 data-lb-caption="Page contact — formulaire et localisation">
-            <div class="carousel-caption">Page contact — formulaire de contact</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Connexion.png"
-                 alt="Page connexion"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Connexion.png"
-                 data-lb-caption="Connexion — formulaire d'authentification membre">
-            <div class="carousel-caption">Connexion — authentification membre</div>
-          </div>
-          <div class="carousel-slide">
-            <img class="s-app"
-                 src="../../assets/images/CanisPro/Visiteur-Membre/Inscription.png"
-                 alt="Page inscription"
-                 data-lb-src="../../assets/images/CanisPro/Visiteur-Membre/Inscription.png"
-                 data-lb-caption="Inscription — création d'un compte propriétaire">
-            <div class="carousel-caption">Inscription — création d'un compte propriétaire</div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-btn carousel-prev" aria-label="Précédent">&#8249;</button>
-      <button class="carousel-btn carousel-next" aria-label="Suivant">&#8250;</button>
-      <div class="carousel-counter"></div>
-      <div class="carousel-dots"></div>
-    </div>
-  </div>
-
-  <!-- ══ Espace Membre ══════════════════════════════ -->
-  <div class="project-section reveal d1">
-    <h2 class="project-section-title">
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:.4rem"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-      Espace Membre
+      Résultat — Espace Membre
     </h2>
-    <div class="context-block">
-      <p>
-        Un membre connecté accède à son espace personnel : consulter et modifier son profil propriétaire, gérer ses chiens (ajout, modification, voir les séances inscrites) et inscrire un chien à une séance.
-      </p>
-    </div>
     <div class="sub-label">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      Résultat — Vue membre
+      Vue membre
     </div>
     <div class="carousel" data-carousel>
       <div class="carousel-viewport">
@@ -676,21 +476,15 @@
     </div>
   </div>
 
-  <!-- ══ Espace Administration ══════════════════════ -->
-  <div class="project-section reveal d2">
+  <!-- ══ Résultat Admin ═════════════════════════════ -->
+  <div class="project-section reveal d1">
     <h2 class="project-section-title">
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:.4rem"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Espace Administration
+      Résultat — Espace Administration
     </h2>
-    <div class="context-block">
-      <p>
-        L'administrateur dispose d'un accès complet en CRUD sur toutes les entités : chiens, propriétaires, cours, séances et inscriptions.
-      </p>
-    </div>
-
     <div class="sub-label">
       <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-      Résultat — Vue administrateur
+      Vue administrateur
     </div>
     <div class="carousel" data-carousel>
       <div class="carousel-viewport">
@@ -744,106 +538,85 @@
     </div>
   </div>
 
-  <!-- ══ Ma contribution ═══════════════════════════ -->
-  <div class="project-section reveal d1">
-    <h2 class="project-section-title">Ma contribution</h2>
-    <ul class="feat-list">
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div><strong>Planification GANTT</strong> — création et gestion du tableau de tâches ClickUp, répartition des responsabilités et suivi de l'avancement</div>
-      </li>
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div>
-          <strong>Entité Doctrine <code>Cours</code></strong> — champs <code>typeEntrainement</code>, <code>description</code>, <code>prix</code>, <code>esCollectif</code>, <code>nbChienMax</code>, <code>durée</code> ; relation <code>OneToMany → Séance</code> ; relation <code>ManyToOne → NiveauxApprentissage</code>
-        </div>
-      </li>
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div>
-          <strong>Entité Doctrine <code>Séance</code></strong> — champs <code>date</code>, <code>heure</code> ; relation <code>ManyToOne → Cours</code> ; relation <code>ManyToMany ↔ Inscription</code>
-        </div>
-      </li>
-      <li>
-        <svg width="15" height="15" color="var(--accent)" class="feat-icon"><use href="#ic-check"/></svg>
-        <div><strong>CSS espace membre</strong> — correction et amélioration du bouton « Modifier un propriétaire »</div>
-      </li>
-    </ul>
-  </div>
-
-  <!-- ══ Résultats ══════════════════════════════════ -->
+  <!-- ══ Code MVC ═══════════════════════════════════ -->
   <div class="project-section reveal d2">
-    <h2 class="project-section-title">Résultats &amp; Apprentissages</h2>
-    <div class="result-grid">
-      <div class="card result-box">
-        <div class="result-num">8</div>
-        <div class="result-label">Entités Doctrine créées</div>
-      </div>
-      <div class="card result-box">
-        <div class="result-num">3</div>
-        <div class="result-label">Rôles gérés (Visiteur · Membre · Admin)</div>
-      </div>
-      <div class="card result-box">
-        <div class="result-num">24h</div>
-        <div class="result-label">Volume de travail en équipe</div>
-      </div>
-      <div class="card result-box">
-        <div class="result-num">4</div>
-        <div class="result-label">Membres dans l'équipe</div>
-      </div>
-    </div>
+    <h2 class="project-section-title">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:.4rem"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      Code — Contrôleur · Modèle · Vue
+    </h2>
     <div class="context-block">
-      <p>Ce projet m'a permis de découvrir le framework Symfony et l'ORM Doctrine, en travaillant sur une architecture MVC complète avec gestion des rôles. La collaboration en équipe de 4, organisée via ClickUp et des branches GitHub dédiées, m'a appris à coordonner le développement et à gérer les conflits de fusion.</p>
-      <p>J'ai pris en charge la planification (GANTT), la création des entités <strong>Cours</strong> et <strong>Séance</strong> avec leurs relations ManyToMany et OneToMany, ainsi que des corrections CSS sur l'espace membre.</p>
+      <p>
+        Extraits de code illustrant l'architecture MVC Symfony : le contrôleur orchestre la logique, le modèle (entités, formulaires, repositories) gère les données, et la vue Twig produit le rendu HTML.
+      </p>
     </div>
-  </div>
 
-  <!-- ══ Documentation ══════════════════════════════ -->
-  <div class="project-section reveal d1">
-    <h2 class="project-section-title">Documentation</h2>
-    <a href="../../assets/files/Documentation Personnelle CanisPro - .pdf"
-       target="_blank" rel="noopener noreferrer"
-       class="doc-download">
-      <div class="doc-download-icon">
-        <svg width="18" height="18" fill="none" stroke="var(--accent)" stroke-width="1.8" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-      </div>
-      <div class="doc-download-text">
-        <strong>Documentation personnelle CanisPro (PDF)</strong>
-        <span>Contexte, choix techniques, base de données, vues utilisateur — 37 pages</span>
-      </div>
-    </a>
-  </div>
-
-  <!-- ══ Compétences BTS SIO ════════════════════════ -->
-  <div class="project-section reveal d2">
-    <h2 class="project-section-title">Compétences BTS SIO validées</h2>
-    <div class="comp-pills-grid">
-      <div class="comp-pill">
-        <div class="comp-pill-dot" style="background:#818cf8"></div>
-        <span class="comp-pill-code">B1.3</span>
-        <span class="comp-pill-label">Développer la présence en ligne de l'organisation</span>
-      </div>
-      <div class="comp-pill">
-        <div class="comp-pill-dot" style="background:#fbbf24"></div>
-        <span class="comp-pill-code">B1.4</span>
-        <span class="comp-pill-label">Travailler en mode projet (agile, GANTT, GitHub)</span>
-      </div>
-      <div class="comp-pill">
-        <div class="comp-pill-dot" style="background:#c084fc"></div>
-        <span class="comp-pill-code">B1.1</span>
-        <span class="comp-pill-label">Gérer le patrimoine informatique (versioning Git)</span>
-      </div>
-      <div class="comp-pill">
-        <div class="comp-pill-dot" style="background:#34d399"></div>
-        <span class="comp-pill-code">B2.2</span>
-        <span class="comp-pill-label">Concevoir et développer une solution applicative</span>
-      </div>
-      <div class="comp-pill">
-        <div class="comp-pill-dot" style="background:#22d3ee"></div>
-        <span class="comp-pill-code">B2.4</span>
-        <span class="comp-pill-label">Concevoir et réaliser une base de données</span>
-      </div>
+    <!-- Contrôleur -->
+    <div class="sub-label">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      Contrôleur — espace personnel
     </div>
+    <figure class="img-card" style="margin-bottom:1.2rem">
+      <img class="img-zoomable s-code"
+           src="../../assets/images/CanisPro/Controleur_espace_personnel.png"
+           alt="Contrôleur espace personnel"
+           data-lb-src="../../assets/images/CanisPro/Controleur_espace_personnel.png"
+           data-lb-caption="Contrôleur — gestion de l'espace personnel propriétaire">
+      <figcaption>Contrôleur PHP — espace personnel propriétaire</figcaption>
+    </figure>
+
+    <!-- Modèle -->
+    <div class="sub-label">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      Modèle — DataFixture (données de test)
+    </div>
+    <figure class="img-card" style="margin-bottom:1.2rem">
+      <img class="img-zoomable s-code"
+           src="../../assets/images/CanisPro/Modele_Donnees_Fixture.png"
+           alt="Modèle DataFixture"
+           data-lb-src="../../assets/images/CanisPro/Modele_Donnees_Fixture.png"
+           data-lb-caption="DataFixture — injection de données de test en base">
+      <figcaption>DataFixture — données de test Doctrine</figcaption>
+    </figure>
+
+    <div class="sub-label">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      Modèle — Formulaire propriétaire
+    </div>
+    <figure class="img-card" style="margin-bottom:1.2rem">
+      <img class="img-zoomable s-code"
+           src="../../assets/images/CanisPro/Modele_Form_proprietaire.png"
+           alt="Formulaire propriétaire"
+           data-lb-src="../../assets/images/CanisPro/Modele_Form_proprietaire.png"
+           data-lb-caption="Form Symfony — formulaire de l'entité Propriétaire">
+      <figcaption>Symfony Form — entité Propriétaire</figcaption>
+    </figure>
+
+    <div class="sub-label">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+      Modèle — Repository propriétaire
+    </div>
+    <figure class="img-card" style="margin-bottom:1.2rem">
+      <img class="img-zoomable s-code"
+           src="../../assets/images/CanisPro/Repository_proprietaire.png"
+           alt="Repository propriétaire"
+           data-lb-src="../../assets/images/CanisPro/Repository_propriétaire.png"
+           data-lb-caption="Repository Doctrine — requêtes personnalisées pour l'entité Propriétaire">
+      <figcaption>Repository Doctrine — Propriétaire</figcaption>
+    </figure>
+
+    <!-- Vue -->
+    <div class="sub-label">
+      <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      Vue — Template Twig espace membre
+    </div>
+    <figure class="img-card" style="margin-bottom:1.2rem">
+      <img class="img-zoomable s-code"
+           src="../../assets/images/CanisPro/Vue_espace_membre.png"
+           alt="Vue Twig espace membre"
+           data-lb-src="../../assets/images/CanisPro/Vue_espace_membre.png"
+           data-lb-caption="Template Twig — rendu HTML de l'espace membre">
+      <figcaption>Template Twig — vue espace membre</figcaption>
+    </figure>
   </div>
 
 </div>
